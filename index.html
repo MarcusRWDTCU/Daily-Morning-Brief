@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Range Capital Research - Morning Brief Feb 25, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e0e;
+    --paper: #f5f0e8;
+    --cream: #ede8dc;
+    --accent: #c8392b;
+    --gold: #b8860b;
+    --muted: #6b6258;
+    --rule: #c9bfaf;
+    --green: #1a6644;
+    --red: #c8392b;
+    --blue: #1a3a5c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+  .masthead { border-bottom: 3px solid var(--ink); padding: 36px 0 20px; text-align: center; }
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .publication-name { font-family: 'DM Serif Display', serif; font-size: 42px; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+  .publication-sub { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .headline-strip { background: var(--ink); color: var(--paper); padding: 14px 20px; margin: 0 -24px; display: flex; gap: 32px; align-items: center; overflow: hidden; }
+  .strip-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+  .strip-text { font-family: 'DM Mono', monospace; font-size: 12px; color: #e8e0d0; white-space: nowrap; animation: scroll-text 45s linear infinite; }
+  @keyframes scroll-text { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .section { margin-top: 40px; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-bottom: 18px;
+  }
+  h1 { font-family: 'DM Serif Display', serif; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
+  h2 { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+  .deck { font-size: 18px; line-height: 1.55; color: #2a2520; margin-bottom: 20px; font-style: italic; }
+  .byline { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 32px; }
+  p { margin-bottom: 14px; }
+  hr.section-rule { border: none; border-top: 1px solid var(--rule); margin: 32px 0; }
+
+  /* Market table */
+  .market-table { width: 100%; border-collapse: collapse; font-family: 'DM Mono', monospace; font-size: 13px; margin-top: 4px; }
+  .market-table th { text-align: left; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 6px 8px; border-bottom: 2px solid var(--ink); }
+  .market-table td { padding: 8px 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .market-table tr:last-child td { border-bottom: none; }
+  .market-table .category { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-top: 14px; padding-bottom: 2px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .neutral { color: var(--muted); }
+  .tag-note { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+
+  /* Thesis boxes */
+  .thesis-box { border-left: 3px solid var(--accent); padding: 16px 20px; background: var(--cream); margin-bottom: 16px; }
+  .thesis-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .thesis-title { font-family: 'DM Serif Display', serif; font-size: 17px; margin-bottom: 8px; }
+
+  /* Calendar */
+  .cal-row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+  .cal-row:last-child { border-bottom: none; }
+  .cal-time { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); min-width: 100px; padding-top: 2px; }
+  .cal-event { flex: 1; }
+  .cal-flag { font-family: 'DM Mono', monospace; font-size: 10px; background: var(--ink); color: var(--paper); padding: 2px 6px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+  .cal-flag.red { background: var(--accent); }
+  .cal-flag.gold { background: var(--gold); }
+
+  /* Earnings */
+  .earn-row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+  .earn-row:last-child { border-bottom: none; }
+  .earn-ticker { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; }
+  .earn-name { color: var(--muted); font-size: 13px; }
+  .earn-detail { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); text-align: right; }
+
+  /* Pullquote */
+  .pullquote { border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 20px 0; margin: 32px 0; font-family: 'DM Serif Display', serif; font-size: 22px; font-style: italic; line-height: 1.35; color: var(--blue); }
+  .pullquote-attr { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+
+  /* Footer */
+  .footer { border-top: 3px solid var(--ink); margin-top: 60px; padding-top: 20px; font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; line-height: 1.8; }
+  .accent-link { color: var(--accent); text-decoration: none; }
+  .accent-link:hover { text-decoration: underline; }
+
+  /* Data timestamp note */
+  .data-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 10px; font-style: italic; }
+
+  /* Regional market boxes */
+  .region-box { background: var(--cream); border: 1px solid var(--rule); padding: 14px 16px; margin-bottom: 12px; }
+  .region-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Open Range Capital Research</span>
+    <span>Wednesday, February 25, 2026</span>
+    <span>Morning Brief</span>
+  </div>
+  <div class="publication-name">Morning Brief</div>
+  <div class="publication-sub">Markets · Macro · Investment Research</div>
+</div>
+
+<div class="headline-strip">
+  <span class="strip-label">Live</span>
+  <span class="strip-text">GOLD $5,210.74 +0.67% · SILVER $90.42 +3.33% · COPPER $6.025 +1.10% · WTI $65.96 · Brent $70.93 · Japan 30Y yield +2.78% overnight · NVDA reports AC tonight · CRM + SNOW AC · S&P futures +0.06% · DAX +0.03% · EUR/USD 1.1804 +0.27% · GOLD $5,210.74 +0.67% · SILVER $90.42 +3.33%</span>
+</div>
+
+<!-- LEDE -->
+<div class="section">
+  <div class="section-label">Analysis</div>
+
+  <h1>Gold at $5,210, Japanese Bonds Breaking, Nvidia Tonight: Three Fault Lines at Once</h1>
+  <p class="deck">Precious metals are holding strong into the Nvidia print: gold at $5,210 (+0.67%), silver at $90.42 (+3.33%), copper +1.10%. Japanese government bond yields are spiking hard overnight (30Y +2.78%). US futures sit essentially flat as the market waits for Jensen Huang to speak.</p>
+  <p class="byline">Open Range Capital Research · Feb 25, 2026 · All data verified from Investing.com ~2:00am ET</p>
+
+  <p>Tuesday's recovery is holding overnight. US futures are roughly flat: S&P +0.06%, Dow +0.04%, Nasdaq +0.06%. The VIX sits at 20.23, still elevated but not panicking. The commodity picture is constructive across the board: gold at $5,210.74, silver at $90.42, copper at $6.025: all green. The anti-dollar, anti-tariff trade that has been building since late 2025 is intact after Tuesday's bounce. Gold remains 2.8% below its January 29 all-time high of $5,364; silver at $90 is approaching its own record territory. The precious metals complex is telling a clear macro story: the 15% tariff regime is inflationary, the dollar is structurally weaker (EUR/USD at 1.1804, +0.27%), and central banks are continuing to rotate out of US Treasuries.</p>
+
+  <p>The more unusual overnight development is in Japanese government bonds. The Japan 10Y yield is at 2.126%, up 1.82% on the session. The 30Y is at 3.369%, up 2.78%. The 40Y is at 3.612%, up 2.50%. These are large moves for a market not known for volatility. The Bank of Japan has been gradually tightening, but a move of this size in the long end suggests either forced selling, a policy signal, or spillover from global fiscal anxiety. Japanese yields at these levels matter for global capital allocation: as JGB yields rise, Japanese institutional investors (among the largest holders of US Treasuries and European bonds) have less incentive to seek yield abroad. Watch this.</p>
+
+  <p>Against this backdrop, tonight is Nvidia. Futures are flat partly because the market is holding its breath. Wall Street consensus sits at $1.53 in EPS and $65.7 billion in revenue, both up roughly 70% year-over-year. The question is not whether Nvidia beats (prediction markets put that at 95% probability). The question is Jensen Huang's forward guidance: Blackwell ramp trajectory, data center demand visibility, and any comment on tariff exposure to Taiwan supply chains. Salesforce and Snowflake also report after the close, both real-time tests of whether the SaaSpocalypse narrative is priced or just getting started.</p>
+
+  <div class="pullquote">
+    "Gold at $5,210, silver at $90, EUR/USD above 1.18: the market is voting clearly on the dollar and the tariff regime. Tonight, Nvidia gets to vote on AI."
+    <div class="pullquote-attr">Open Range Capital Research · Feb 25, 2026</div>
+  </div>
+
+  <p>US equity futures are essentially flat heading into Wednesday's open: S&P 6,894.2 (+0.06%), Dow 49,193.5 (+0.04%), Nasdaq 100 24,992.1 (+0.06%). Small Cap 2000 at 2,650.8 is the lone marginal laggard (-0.06%). The market is not moving; it is waiting. VIX at 20.23 reflects residual tension from the SaaSpocalypse overhang: still elevated, not spiking. The tariff story is in a holding pattern: Trump's 15% Section 122 formal executive order is still being drafted. No news is not good news: it is simply uncertainty maintained. The 150-day clock continues its quiet countdown, now at Day 3.</p>
+
+  <p>Workday's after-hours collapse on Tuesday (-10% on weak subscription revenue guidance) confirmed that Tuesday's software relief rally was partial and provisional. The Citrini thesis did not evaporate because Anthropic reframed its tools as enterprise-complementary. It simply went quiet for 24 hours. Watch tonight's Salesforce call with attention to guidance tone above all other metrics.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- MARKET SNAPSHOT -->
+<div class="section">
+  <div class="section-label">Market Snapshot · Data verified from Investing.com · Feb 25, 2026 · ~02:00 ET</div>
+
+  <table class="market-table">
+    <thead>
+      <tr>
+        <th>Instrument</th>
+        <th>Level</th>
+        <th>Change</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr><td colspan="4" class="category">US Equities · Tuesday Feb 24 Close (Verified)</td></tr>
+      <tr>
+        <td>S&amp;P 500</td>
+        <td>6,890.07</td>
+        <td class="up">+52.32 · +0.77%</td>
+        <td>Bounce from 6,800 support</td>
+      </tr>
+      <tr>
+        <td>Nasdaq Comp. (close)</td>
+        <td>22,863.68</td>
+        <td class="up">+236.41 · +1.04%</td>
+        <td>Software relief rally</td>
+      </tr>
+      <tr>
+        <td>Dow Jones (close)</td>
+        <td>49,174.50</td>
+        <td class="up">+370.44 · +0.76%</td>
+        <td>HD + IBM bounce led</td>
+      </tr>
+
+      <tr><td colspan="4" class="category">US Futures · Live ~02:00 ET Feb 25</td></tr>
+      <tr>
+        <td>US 30 (Dow)</td>
+        <td>49,193.5</td>
+        <td class="up">+18.7 · +0.04%</td>
+        <td>Essentially flat overnight</td>
+      </tr>
+      <tr>
+        <td>US 500 (S&amp;P)</td>
+        <td>6,894.2</td>
+        <td class="up">+4.1 · +0.06%</td>
+        <td>Holding Tuesday gains</td>
+      </tr>
+      <tr>
+        <td>US Tech 100 (NQ)</td>
+        <td>24,992.1</td>
+        <td class="up">+15.1 · +0.06%</td>
+        <td>Flat pre-NVDA</td>
+      </tr>
+      <tr>
+        <td>Small Cap 2000</td>
+        <td>2,650.8</td>
+        <td class="down">-1.5 · -0.06%</td>
+        <td>Slight underperformance</td>
+      </tr>
+      <tr>
+        <td>VIX</td>
+        <td>20.23</td>
+        <td class="down">-0.02 · -0.11%</td>
+        <td>Still elevated vs. norm</td>
+      </tr>
+
+      <tr><td colspan="4" class="category">European Futures · Live ~02:00 ET</td></tr>
+      <tr>
+        <td>DAX</td>
+        <td>25,070.5</td>
+        <td class="up">+8.5 · +0.03%</td>
+        <td>Near record levels; resilient</td>
+      </tr>
+      <tr>
+        <td>CAC 40</td>
+        <td>8,555.3</td>
+        <td class="up">+19.8 · +0.23%</td>
+        <td>Outperforming overnight</td>
+      </tr>
+      <tr>
+        <td>FTSE 100</td>
+        <td>10,718.3</td>
+        <td class="down">-4.7 · -0.04%</td>
+        <td>Slight drag; flat</td>
+      </tr>
+      <tr>
+        <td>Euro Stoxx 50</td>
+        <td>6,145</td>
+        <td class="up">+9 · +0.14%</td>
+        <td>Broad European bid</td>
+      </tr>
+
+      <tr><td colspan="4" class="category">Commodities · Live ~02:00 ET</td></tr>
+      <tr>
+        <td>Gold</td>
+        <td>$5,210.74</td>
+        <td class="up">+$34.44 · +0.67%</td>
+        <td>2.8% below Jan 29 ATH $5,364</td>
+      </tr>
+      <tr>
+        <td>Silver</td>
+        <td>$90.420</td>
+        <td class="up">+$2.914 · +3.33%</td>
+        <td>Near record territory</td>
+      </tr>
+      <tr>
+        <td>Copper</td>
+        <td>$6.0250</td>
+        <td class="up">+$0.0657 · +1.10%</td>
+        <td>Industrial metals strong</td>
+      </tr>
+      <tr>
+        <td>WTI Crude</td>
+        <td>$65.96</td>
+        <td class="up">+$0.33 · +0.50%</td>
+        <td>Iran risk premium holds</td>
+      </tr>
+      <tr>
+        <td>Brent Oil</td>
+        <td>$70.93</td>
+        <td class="up">+$0.35 · +0.50%</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Natural Gas</td>
+        <td>$2.829</td>
+        <td class="down">-$0.005 · -0.18%</td>
+        <td>Slight softness</td>
+      </tr>
+
+      <tr><td colspan="4" class="category">Bond Yields · Live ~02:00 ET</td></tr>
+      <tr>
+        <td>US 10Y</td>
+        <td>4.049%</td>
+        <td class="up">+0.016 · +0.40%</td>
+        <td>Yields rising slightly overnight</td>
+      </tr>
+      <tr>
+        <td>US 30Y</td>
+        <td>4.705%</td>
+        <td class="up">+0.016 · +0.34%</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>US 2Y</td>
+        <td>3.463%</td>
+        <td class="up">+0.007 · +0.20%</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Japan 10Y</td>
+        <td>2.126%</td>
+        <td class="up">+0.038 · +1.82%</td>
+        <td class="down">JGB yields spiking · watch</td>
+      </tr>
+      <tr>
+        <td>Japan 30Y</td>
+        <td>3.369%</td>
+        <td class="up">+0.091 · +2.78%</td>
+        <td class="down">Large move; global implication</td>
+      </tr>
+      <tr>
+        <td>Japan 40Y</td>
+        <td>3.612%</td>
+        <td class="up">+0.088 · +2.50%</td>
+        <td class="down">Long-end JGB selloff accelerating</td>
+      </tr>
+      <tr>
+        <td>Euro Bund</td>
+        <td>129.62</td>
+        <td class="down">-0.07 · -0.06%</td>
+        <td>Slightly lower</td>
+      </tr>
+      <tr>
+        <td>UK Gilt</td>
+        <td>92.95</td>
+        <td class="up">+0.07 · +0.08%</td>
+        <td>Recovering from Tuesday</td>
+      </tr>
+
+      <tr><td colspan="4" class="category">FX · Live ~02:00 ET</td></tr>
+      <tr>
+        <td>EUR/USD</td>
+        <td>1.1804</td>
+        <td class="up">+0.0032 · +0.27%</td>
+        <td>Dollar weakening</td>
+      </tr>
+      <tr>
+        <td>USD/JPY</td>
+        <td>155.75</td>
+        <td class="down">-0.07 · -0.04%</td>
+        <td>Yen barely moving vs. JGB spike</td>
+      </tr>
+      <tr>
+        <td>GBP/USD</td>
+        <td>1.3525</td>
+        <td class="up">+0.0029 · +0.21%</td>
+        <td>Cable firm</td>
+      </tr>
+      <tr>
+        <td>USD/CHF</td>
+        <td>0.7724</td>
+        <td class="down">-0.0017 · -0.22%</td>
+        <td>Franc strengthening</td>
+      </tr>
+      <tr>
+        <td>USD/CAD</td>
+        <td>1.3675</td>
+        <td class="down">-0.0024 · -0.18%</td>
+        <td>CAD firm on oil</td>
+      </tr>
+      <tr>
+        <td>AUD/USD</td>
+        <td>0.7113</td>
+        <td class="up">+0.0055 · +0.78%</td>
+        <td>Commodity currencies bid</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <p class="data-note">All data pasted directly from Investing.com by Marcus, ~02:00 ET Feb 25, 2026. No estimates.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- ASIA + EUROPE -->
+<div class="section">
+  <div class="section-label">Global Markets · Asia Close and Europe Session</div>
+
+  <div class="region-box">
+    <div class="region-label">Asia · Wednesday Close · Source: CNBC</div>
+    <table class="market-table" style="margin-top:0;">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Level</th>
+          <th>Change</th>
+          <th>Driver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nikkei 225</td>
+          <td>Record high</td>
+          <td class="up">+1.4%+</td>
+          <td>Tech rally; AI disruption fears ease after Wall Street bounce</td>
+        </tr>
+        <tr>
+          <td>Hang Seng</td>
+          <td>-</td>
+          <td class="up">+0.39%</td>
+          <td>Broad gains; tech names led</td>
+        </tr>
+        <tr>
+          <td>South Korea KOSPI</td>
+          <td>6,000+</td>
+          <td class="up">+1.72%</td>
+          <td>Breached 6,000 for first time; SK Hynix +0.6%, Samsung +0.88%</td>
+        </tr>
+        <tr>
+          <td>ASX 200</td>
+          <td>-</td>
+          <td class="up">+1.13%</td>
+          <td>Broad gains across the session</td>
+        </tr>
+        <tr>
+          <td>Taiwan Taiex</td>
+          <td>Record</td>
+          <td class="up">+1.8%</td>
+          <td>5th consecutive record session; semiconductor strength</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px; margin-top:12px; line-height:1.6;">Asia closed broadly higher on Wednesday in a session driven by a tech-led rally that directly reversed Monday's SaaSpocalypse selloff. The catalyst was Wall Street's Tuesday rebound and a reassessment that AI disruption concerns had been overpriced. South Korea's KOSPI broke through 6,000 for the first time, with index heavyweights SK Hynix and Samsung Electronics both gaining on pre-Nvidia earnings optimism. Japan's Nikkei 225 pushed to a fresh record high. Australia's ASX 200 added 1.13%, and Taiwan's benchmark rose 1.8% for its fifth straight record session. The region's tone heading into European open: risk-on, semiconductors leading, attention firmly on tonight's Nvidia print.</p>
+  </div>
+
+  <div class="region-box">
+    <div class="region-label">Europe · Wednesday Open · Futures verified by Marcus ~02:00 ET</div>
+    <table class="market-table" style="margin-top:0;">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Level</th>
+          <th>Change</th>
+          <th>Driver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DAX (Germany)</td>
+          <td>25,070.5</td>
+          <td class="up">+8.5 · +0.03%</td>
+          <td>Flat; earnings day: E.ON, Bayer, Heidelberg Materials</td>
+        </tr>
+        <tr>
+          <td>CAC 40 (France)</td>
+          <td>8,555.3</td>
+          <td class="up">+19.8 · +0.23%</td>
+          <td>Modest bid; luxury and consumer names stable</td>
+        </tr>
+        <tr>
+          <td>FTSE 100 (UK)</td>
+          <td>10,718.3</td>
+          <td class="down">-4.7 · -0.04%</td>
+          <td>Essentially flat; HSBC beat pre-market a mild positive</td>
+        </tr>
+        <tr>
+          <td>Euro Stoxx 50</td>
+          <td>6,145</td>
+          <td class="up">+9 · +0.14%</td>
+          <td>Broad European bid; Diageo, Ferrovial, Novonesis reporting</td>
+        </tr>
+        <tr>
+          <td>Euro Bund (Mar 26)</td>
+          <td>129.62</td>
+          <td class="down">-0.07 · -0.06%</td>
+          <td>Marginally lower; rates stable</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px; margin-top:12px; line-height:1.6;">Europe is opening Wednesday in a cautiously positive posture, carrying forward Tuesday's higher close in which stocks broadly rose as investors digested the new tariff landscape following Trump's weekend 15% announcement. HSBC reported annual pre-tax profit of $29.91 billion before the open, beating estimates, providing a mild tailwind for financials. It is a heavy earnings day on the continent: Iberdrola, E.ON, Diageo, Bayer, Ferrovial, and Heidelberg Materials are all reporting. Trump's State of the Union Tuesday evening contained no new tariff escalation and included the striking claim that tariffs will eventually replace income taxes, a statement markets read as resolve rather than imminent threat. The EU has held firm on its position that the existing trade framework is non-negotiable. Auto stocks remain the key tariff-sensitive sector to watch.</p>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- THREE THESES -->
+<div class="section">
+  <div class="section-label">Investment Theses</div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis I · Today's Defining Event</div>
+    <div class="thesis-title">Nvidia Reports Tonight: The Print That Either Anchors or Cracks the AI Bull Case</div>
+    <p>Consensus: $1.53 EPS, $65.7 billion in revenue, both up roughly 70% year-over-year. NVDA is sliding 1.76% ahead of the print: positioning unwinding, not fundamental selling. What matters tonight is not the headline beat (prediction markets gave that 95% probability): Jensen Huang's commentary on three things: Blackwell platform ramp trajectory, data center demand visibility through 2026, and any mention of tariff exposure to the Taiwan supply chain. A bullish, forward-looking guide with no supply chain caveats gives the market a clear catalyst to reverse today's risk-off and push the S&amp;P back toward 7,000. A hedged guide, or silence on Blackwell timing, is a floor-removal event for the broader AI trade.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis II · Commodity Macro</div>
+    <div class="thesis-title">Gold $5,210, Silver $90, Copper $6.03: The Anti-Dollar Trade Is Alive and Accelerating</div>
+    <p>The commodity complex this morning is telling a coherent macro story: the dollar is structurally weaker, tariff-driven inflation is real, and central banks have not finished rotating out of US Treasuries. EUR/USD is at 1.1804 (+0.27%), AUD at 0.7113 (+0.78%), commodity currencies broadly bid. Gold at $5,210 is 2.8% below its January 29 all-time high of $5,364 but rising. Silver at $90.42 is approaching its own record territory after more than doubling over the past 12 months. Copper at $6.025 signals genuine industrial demand expectations, not just financial speculation. The intermarket read is clear: if you believe the 15% tariff regime is inflationary and the dollar faces structural headwinds from de-dollarization, these levels are not yet extremes. The CFTC positioning report on Friday will show whether speculative length is stretched: that is the primary risk to monitor for a near-term pullback.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis III · Macro / Policy</div>
+    <div class="thesis-title">The 150-Day Tariff Clock: Day 3, Still No Executive Order, Still Unpriced</div>
+    <p>Markets are treating the absence of the formal 15% tariff executive order as a positive. It is not: it is uncertainty prolonged. Every day without the formal order is suspended dread that resolves into either a relief rally (order softened) or a sharp selloff (order arrives in full). Europe's relative calm this morning (DAX +0.03%) reflects the same logic: no news is a reprieve, not a resolution. The structural trade here remains unchanged: the Section 122 authority expires in 147 days, Congress has shown no urgency to act, and the EU has publicly rejected renegotiation. Gold at $5,210 and silver at $90.42 are the market's live verdict on this thesis. Both metals are pricing sustained dollar debasement and tariff-driven inflation. The anti-dollar, anti-Treasury trade is intact.</p>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- CALENDAR -->
+<div class="section">
+  <div class="section-label">Today's Calendar · Wednesday, February 25, 2026</div>
+
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">Watch for formal White House executive order raising tariffs to 15% under Section 122 <span class="cal-flag red">Key Risk</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">08:30 ET</div>
+    <div class="cal-event">Durable Goods Orders (January): tariff-sensitive manufacturing demand; export orders component closely watched <span class="cal-flag">Data</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">Morning</div>
+    <div class="cal-event">Multiple Fed speakers: reaction to SOTU; watch for any rate-cut path commentary given Cook's AI-unemployment framing Tuesday <span class="cal-flag">Fed</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">After Close</div>
+    <div class="cal-event">Nvidia (NVDA) earnings · Q4 FY2026: $1.53 EPS est. / $65.7B revenue est. <span class="cal-flag red">Pivotal</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">After Close</div>
+    <div class="cal-event">Salesforce (CRM) earnings: SaaSpocalypse litmus test; guidance tone is the only number that matters <span class="cal-flag red">Key</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">After Close</div>
+    <div class="cal-event">Snowflake (SNOW) earnings: data cloud demand; AI workload growth commentary <span class="cal-flag">Earnings</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">After Close</div>
+    <div class="cal-event">TJX Companies earnings: consumer spending signal in tariff-inflation environment <span class="cal-flag">Earnings</span></div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- EARNINGS WATCH -->
+<div class="section">
+  <div class="section-label">Earnings Watch · Wednesday Feb 25</div>
+  <div class="earn-row">
+    <div><span class="earn-ticker">NVDA</span><span class="earn-name"> Nvidia</span></div>
+    <div class="earn-detail">$1.53 EPS est. · $65.7B rev est. · AC · Stock -1.76% into print</div>
+  </div>
+  <div class="earn-row">
+    <div><span class="earn-ticker">CRM</span><span class="earn-name"> Salesforce</span></div>
+    <div class="earn-detail">SaaSpocalypse test · Guidance tone critical · AC</div>
+  </div>
+  <div class="earn-row">
+    <div><span class="earn-ticker">SNOW</span><span class="earn-name"> Snowflake</span></div>
+    <div class="earn-detail">AI workload growth · AC</div>
+  </div>
+  <div class="earn-row">
+    <div><span class="earn-ticker">TJX</span><span class="earn-name"> TJX Companies</span></div>
+    <div class="earn-detail">Consumer discretionary read · Regular hours</div>
+  </div>
+  <div class="earn-row">
+    <div><span class="earn-ticker">WDAY</span><span class="earn-name"> Workday</span></div>
+    <div class="earn-detail">Already reported · -10% AH Tuesday · Weak sub rev guide</div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- MACRO NOTE -->
+<div class="section">
+  <div class="section-label">Macro Note</div>
+  <h2>Cook's Warning: The Fed May Be Structurally Locked Out of the Next Downturn</h2>
+  <p>Speaking Tuesday at the National Association for Business Economics, Fed Governor Lisa Cook made an observation that deserves more attention than it has received. She argued that an AI-driven productivity boom could raise unemployment without that unemployment representing genuine demand-side slack, a condition where the Fed's standard cure of rate cuts would be inflationary rather than corrective. Simply put: if AI destroys jobs while boosting productivity and output, the labor market deteriorates without the indicators that normally justify easing. The Fed would be fighting a different kind of problem with the wrong tool.</p>
+  <p>Rate markets are still pricing in two 25-basis-point cuts for 2026. If Cook's framework gains traction within the FOMC, that pricing is wrong: not because rates go higher, but because the trigger for cuts may never arrive in the expected form. That is a significant tail risk sitting inside the "Fed put will save us" assumption that underpins most equity bull case scenarios. Watch today's Fed speakers for any corroboration of Cook's framing.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- SUBSTACK -->
+<div class="section">
+  <div class="section-label">Research Notes</div>
+  <p>We have published two notes on the structural AI disruption dynamic playing out in software markets: <a href="https://substack.com/home/post/p-188803679" target="_blank" class="accent-link">Part I: The Structural Revaluation in Application Software</a> and <a href="https://substack.com/home/post/p-188806163" target="_blank" class="accent-link">Part II: Blue Owl and the Credit Market Dimension</a>. Workday's after-hours collapse confirms the core thesis. Tonight's Salesforce guidance will be the next real-time test.</p>
+</div>
+
+<div class="footer">
+  <p>Open Range Capital Research · Morning Brief · February 25, 2026</p>
+  <p>Market data sourced from Investing.com during live US session. This publication is for informational and educational purposes only. Not investment advice.</p>
+  <p style="margin-top:8px;">
+    <a href="https://substack.com/home/post/p-188803679" target="_blank" class="accent-link">Substack: SaaSpocalypse Part I</a> ·
+    <a href="https://substack.com/home/post/p-188806163" target="_blank" class="accent-link">Substack: Part II (Blue Owl)</a>
+  </p>
+</div>
+
+</body>
+</html>
