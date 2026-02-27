@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Range Capital Research - Morning Brief Feb 27, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#0e0e0e; --paper:#f5f0e8; --cream:#ede8dc; --accent:#c8392b; --gold:#b8860b; --muted:#6b6258; --rule:#c9bfaf; --green:#1a6644; --red:#c8392b; --blue:#1a3a5c; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--paper); color:var(--ink); font-family:'Libre Baskerville',Georgia,serif; font-size:16px; line-height:1.7; max-width:780px; margin:0 auto; padding:0 24px 80px; }
+  .masthead { border-bottom:3px solid var(--ink); padding:36px 0 20px; text-align:center; }
+  .masthead-top { display:flex; justify-content:space-between; align-items:baseline; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; }
+  .publication-name { font-family:'DM Serif Display',serif; font-size:42px; letter-spacing:-0.02em; line-height:1; margin-bottom:6px; }
+  .publication-sub { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); }
+  .headline-strip { background:var(--ink); color:var(--paper); padding:14px 20px; margin:0 -24px; display:flex; gap:32px; align-items:center; overflow:hidden; }
+  .strip-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); white-space:nowrap; flex-shrink:0; }
+  .strip-text { font-family:'DM Mono',monospace; font-size:12px; color:#e8e0d0; white-space:nowrap; animation:scroll-text 60s linear infinite; }
+  @keyframes scroll-text { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  .section { margin-top:40px; }
+  .section-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); border-top:1px solid var(--rule); padding-top:10px; margin-bottom:18px; }
+  h1 { font-family:'DM Serif Display',serif; font-size:34px; line-height:1.15; letter-spacing:-0.01em; margin-bottom:16px; }
+  h2 { font-family:'DM Serif Display',serif; font-size:22px; line-height:1.25; margin-bottom:10px; }
+  .deck { font-size:18px; line-height:1.55; color:#2a2520; margin-bottom:20px; font-style:italic; }
+  .byline { font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:0.08em; margin-bottom:32px; }
+  p { margin-bottom:14px; }
+  hr.section-rule { border:none; border-top:1px solid var(--rule); margin:32px 0; }
+  .market-table { width:100%; border-collapse:collapse; font-family:'DM Mono',monospace; font-size:13px; margin-top:4px; }
+  .market-table th { text-align:left; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); padding:6px 8px; border-bottom:2px solid var(--ink); }
+  .market-table td { padding:8px 8px; border-bottom:1px solid var(--rule); vertical-align:middle; }
+  .market-table tr:last-child td { border-bottom:none; }
+  .market-table .category { font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); padding-top:14px; padding-bottom:2px; font-weight:500; }
+  .up { color:var(--green); }
+  .down { color:var(--red); }
+  .neutral { color:var(--muted); }
+  .tag-note { font-size:9px; letter-spacing:0.1em; color:var(--muted); text-transform:uppercase; }
+  .thesis-box { border-left:3px solid var(--accent); padding:16px 20px; background:var(--cream); margin-bottom:16px; }
+  .thesis-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+  .thesis-title { font-family:'DM Serif Display',serif; font-size:17px; margin-bottom:8px; }
+  .cal-row { display:flex; gap:16px; padding:10px 0; border-bottom:1px solid var(--rule); font-size:14px; }
+  .cal-row:last-child { border-bottom:none; }
+  .cal-time { font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); min-width:100px; padding-top:2px; }
+  .cal-event { flex:1; }
+  .cal-flag { font-family:'DM Mono',monospace; font-size:10px; background:var(--ink); color:var(--paper); padding:2px 6px; border-radius:2px; margin-left:8px; vertical-align:middle; }
+  .cal-flag.red { background:var(--accent); }
+  .cal-flag.gold { background:var(--gold); }
+  .pullquote { border-top:3px solid var(--ink); border-bottom:1px solid var(--rule); padding:20px 0; margin:32px 0; font-family:'DM Serif Display',serif; font-size:22px; font-style:italic; line-height:1.35; color:var(--blue); }
+  .pullquote-attr { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-top:10px; }
+  .earnings-result { background:var(--cream); border:1px solid var(--rule); padding:14px 16px; margin-bottom:10px; }
+  .earnings-result-header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; }
+  .earnings-ticker-large { font-family:'DM Mono',monospace; font-size:16px; font-weight:500; }
+  .earnings-verdict { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; }
+  .earnings-verdict.beat { color:var(--green); }
+  .earnings-verdict.miss { color:var(--red); }
+  .earnings-verdict.mixed { color:var(--gold); }
+  .earnings-metrics { font-family:'DM Mono',monospace; font-size:12px; color:var(--muted); margin-bottom:8px; }
+  .earnings-metrics span { margin-right:20px; }
+  .footer { border-top:3px solid var(--ink); margin-top:60px; padding-top:20px; font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); letter-spacing:0.08em; line-height:1.8; }
+  .accent-link { color:var(--accent); text-decoration:none; }
+  .accent-link:hover { text-decoration:underline; }
+  .data-note { font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); margin-top:10px; font-style:italic; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Open Range Capital Research</span>
+    <span>Friday, February 27, 2026</span>
+    <span>Morning Brief</span>
+  </div>
+  <div class="publication-name">Morning Brief</div>
+  <div class="publication-sub">Markets &middot; Macro &middot; Investment Research</div>
+</div>
+
+<div class="headline-strip">
+  <span class="strip-label">Live</span>
+  <span class="strip-text">NVDA -5.5% on record beat &middot; US 10Y 3.998% below 4% first time since Nov 28 &middot; DELL $33.4B rev FY27 guide $138-142B &middot; SILVER +3.81% &middot; GOLD $5,203 +0.18% &middot; COPPER +1.42% &middot; S&amp;P futures -0.28% &middot; NQ -0.22% &middot; PPI 08:30 ET today &middot; Jensen Huang: "The market got it wrong" on software disruption &middot; NVDA -5.5% on record beat &middot; US 10Y 3.998% below 4% first time since Nov 28 &middot; DELL $33.4B rev FY27 guide $138-142B &middot; SILVER +3.81%</span>
+</div>
+
+<div class="section">
+  <div class="section-label">Analysis</div>
+  <h1>Nvidia Fell 5% on the Best Earnings in Tech History. The 10-Year Broke 4%. Something Has Changed.</h1>
+  <p class="deck">Nvidia reported $68.13B in revenue, guided to $78B for Q1, and its stock fell 5.5% on Thursday, its worst day since April. The US 10-year yield broke below 4% for the first time since November 28. Dell reported a quarter of historic magnitude and barely moved futures. The market is telling us something about where we are in this cycle.</p>
+  <p class="byline">Open Range Capital Research &middot; Marcus Drauschke &middot; Feb 27, 2026</p>
+
+  <p>Nvidia beat every number the market had. Revenue of $68.13B against a $66.21B consensus, earnings of $1.62 against a $1.53 estimate, and a Q1 FY2027 guide of approximately $78B against a $72.8B Street estimate: a 7% beat on forward guidance. Jensen Huang announced that Vera Rubin samples had shipped to customers ahead of schedule. The data center business generated $62.3B, up 75% year over year. By any conventional standard, this was a historic quarter.</p>
+
+  <p>The stock fell 5.5% on Thursday. Its worst day since April 2025. Other chip stocks followed: Broadcom, Lam Research, Western Digital, and Applied Materials all sold off. The Nasdaq closed down 1.18% at 22,878. The S&P 500 fell 0.54% to 6,908. The Dow, shielded from chip exposure by its industrial and financial composition, gained 0.03%. Motley Fool put it accurately: the majority of stocks in the S&P 500 actually rose on Thursday. Nvidia's index weight was large enough to drag the market down regardless.</p>
+
+  <p>The more significant signal came from bonds. The US 10-year yield closed Thursday at 3.998%, below 4% for the first time since November 28. The 2-year fell 2.8 basis points to 3.420%. Rates are falling as chips sell off. That convergence suggests something beyond mechanical profit-taking: the bond market is beginning to price slower growth. Whether that is a rotation-driven technical move or a genuine repricing of the economic outlook is the central question entering Friday. Today's PPI at 08:30 ET will be the first data point toward an answer.</p>
+
+  <p>Huang pushed back directly in a CNBC interview Thursday, saying "I think the markets got it wrong" on software disruption. He defended ServiceNow by name, arguing that AI agents are fine-tuned tools that augment enterprise software rather than replace it. It is notable that the CEO of the world's most valuable AI infrastructure company felt compelled to defend the application layer. Huang understands that a prolonged SaaS collapse reduces enterprise IT budgets: the same budgets that fund Nvidia chip purchases.</p>
+
+  <p>Dell Technologies reported after the close Thursday in what should have been an unambiguously positive catalyst for the infrastructure thesis: Q4 revenue of $33.4B against a $31.75B consensus, EPS of $3.89 against a $3.44 estimate, ISG (data center and AI servers) up 73% year over year, and FY2027 guidance of $138-142B in revenue and $12.90 in EPS against a prior consensus near $10.56. A 22% upside surprise on forward earnings guidance. Futures are still lower this morning. The market is not rewarding strong fundamentals right now. It is processing fear.</p>
+</div>
+
+<hr class="section-rule">
+
+<div class="section">
+  <div class="section-label">Market Snapshot</div>
+  <h2>Market Snapshot</h2>
+  <p style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:16px;">Open Range Capital Research &middot; Marcus Drauschke &middot; Feb 27, 2026</p>
+
+  <table class="market-table">
+    <thead><tr><th>Instrument</th><th>Level</th><th>Change</th><th>Note</th></tr></thead>
+    <tbody>
+
+      <tr><td colspan="4" class="category">US Equity &middot; Thursday Feb 26 Close</td></tr>
+      <tr><td>Dow Jones</td><td>49,499.20</td><td class="up">+17.05 &middot; +0.03%</td><td><span class="tag-note">Defensives held; chip-free sectors gained</span></td></tr>
+      <tr><td>S&amp;P 500</td><td>6,908.86</td><td class="down">-37.27 &middot; -0.54%</td><td><span class="tag-note">NVDA weight dragged index despite broad gains</span></td></tr>
+      <tr><td>Nasdaq</td><td>22,878.38</td><td class="down">-273.69 &middot; -1.18%</td><td><span class="tag-note">Chips and software both sold</span></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,677.29</td><td class="up">+13.96 &middot; +0.52%</td><td><span class="tag-note">Rotation into small caps as rates fell</span></td></tr>
+      <tr><td>S&amp;P 500 VIX</td><td>18.63</td><td class="up">+0.70 &middot; +3.90%</td><td><span class="tag-note">Fear rebuilding</span></td></tr>
+
+      <tr><td colspan="4" class="category">US Futures &middot; Live ~01:57 ET</td></tr>
+      <tr><td>US 30 (Dow)</td><td>49,244.9</td><td class="down">-254.6 &middot; -0.51%</td><td></td></tr>
+      <tr><td>US 500 (S&amp;P)</td><td>6,889.7</td><td class="down">-19.2 &middot; -0.28%</td><td></td></tr>
+      <tr><td>US Tech 100 (NQ)</td><td>24,980.1</td><td class="down">-54.3 &middot; -0.22%</td><td></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,654.9</td><td class="down">-22.4 &middot; -0.84%</td><td><span class="tag-note">Sharpest overnight decline</span></td></tr>
+      <tr><td>VIX Futures</td><td>20.05</td><td class="up">+0.29 &middot; +1.49%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">European Futures &middot; Live ~01:57 ET</td></tr>
+      <tr><td>DAX</td><td>25,303.0</td><td class="down">-10.0 &middot; -0.04%</td><td></td></tr>
+      <tr><td>CAC 40</td><td>8,637.8</td><td class="up">+3.3 &middot; +0.04%</td><td></td></tr>
+      <tr><td>FTSE 100</td><td>10,863.5</td><td class="down">-1.5 &middot; -0.01%</td><td></td></tr>
+      <tr><td>Euro Stoxx 50</td><td>6,171</td><td class="up">+1 &middot; +0.02%</td><td><span class="tag-note">Europe essentially flat; limited chip exposure</span></td></tr>
+
+      <tr><td colspan="4" class="category">Commodities &middot; Live ~01:57 ET</td></tr>
+      <tr><td>Gold (Apr 26)</td><td>$5,203.61</td><td class="up">+$9.41 &middot; +0.18%</td><td><span class="tag-note">Structural bid holding above $5,200</span></td></tr>
+      <tr><td>Silver (Mar 26)</td><td>$90.310</td><td class="up">+$3.312 &middot; +3.81%</td><td><span class="tag-note">Strong overnight bounce; reclaims $90</span></td></tr>
+      <tr><td>Copper (May 26)</td><td>$6.1107</td><td class="up">+$0.0857 &middot; +1.42%</td><td><span class="tag-note">Multi-year high territory</span></td></tr>
+      <tr><td>WTI Crude (Apr 26)</td><td>$65.71</td><td class="up">+$0.50 &middot; +0.77%</td><td></td></tr>
+      <tr><td>Brent (May 26)</td><td>$71.26</td><td class="up">+$0.42 &middot; +0.59%</td><td></td></tr>
+      <tr><td>Natural Gas (Apr 26)</td><td>$2.835</td><td class="down">-$0.002 &middot; -0.07%</td><td></td></tr>
+      <tr><td>US Soybeans (May 26)</td><td>$1,166.50</td><td class="up">+$3.50 &middot; +0.30%</td><td></td></tr>
+      <tr><td>US Wheat (May 26)</td><td>$577.90</td><td class="up">+$3.90 &middot; +0.68%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Bond Yields &middot; Live ~01:57 ET</td></tr>
+      <tr><td>US 10Y</td><td>3.998%</td><td class="down">-0.019 &middot; -0.47%</td><td><span class="tag-note">Below 4% for first time since Nov 28</span></td></tr>
+      <tr><td>US 30Y</td><td>4.652%</td><td class="down">-0.017 &middot; -0.36%</td><td></td></tr>
+      <tr><td>US 2Y</td><td>3.420%</td><td class="down">-0.028 &middot; -0.81%</td><td><span class="tag-note">Short end pricing more Fed cuts</span></td></tr>
+      <tr><td>Japan 10Y</td><td>2.118%</td><td class="down">-0.037 &middot; -1.72%</td><td><span class="tag-note">JGB spike from Wed fully reversing</span></td></tr>
+      <tr><td>Japan 30Y</td><td>3.333%</td><td class="down">-0.042 &middot; -1.24%</td><td></td></tr>
+      <tr><td>Japan 40Y</td><td>3.563%</td><td class="down">-0.054 &middot; -1.49%</td><td></td></tr>
+      <tr><td>Euro Bund</td><td>129.96</td><td class="up">+0.19 &middot; +0.15%</td><td></td></tr>
+      <tr><td>UK Gilt</td><td>93.27</td><td class="up">+0.40 &middot; +0.43%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">FX &middot; Live ~01:57 ET</td></tr>
+      <tr><td>EUR/USD</td><td>1.1804</td><td class="up">+0.0007 &middot; +0.06%</td><td><span class="tag-note">Dollar weakness persisting above 1.18</span></td></tr>
+      <tr><td>USD/JPY</td><td>155.87</td><td class="down">-0.27 &middot; -0.17%</td><td></td></tr>
+      <tr><td>GBP/USD</td><td>1.3468</td><td class="down">-0.0017 &middot; -0.13%</td><td></td></tr>
+      <tr><td>USD/CHF</td><td>0.7730</td><td class="down">-0.0012 &middot; -0.15%</td><td></td></tr>
+      <tr><td>AUD/USD</td><td>0.7123</td><td class="up">+0.0017 &middot; +0.24%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Crypto &middot; Live ~01:57 ET</td></tr>
+      <tr><td>Bitcoin</td><td>$67,673.4</td><td class="down">-$510.6 &middot; -0.75%</td><td><span class="tag-note">Risk-off; reversed Wednesday's surge</span></td></tr>
+      <tr><td>Ethereum</td><td>$2,036.20</td><td class="down">-$26.37 &middot; -1.28%</td><td></td></tr>
+
+    </tbody>
+  </table>
+  <p class="data-note">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements &middot; February 27, 2026</p>
+</div>
+
+<hr class="section-rule">
+
+<div class="section">
+  <div class="section-label">Earnings Recap &middot; Thursday February 26, 2026</div>
+
+  <div class="earnings-result">
+    <div class="earnings-result-header">
+      <span class="earnings-ticker-large">DELL &middot; Dell Technologies</span>
+      <span class="earnings-verdict beat">Massive Beat &middot; FY27 Guide +22% above consensus EPS</span>
+    </div>
+    <div class="earnings-metrics">
+      <span>Q4 Rev: $33.4B vs $31.75B est (+39% YoY)</span>
+      <span>EPS: $3.89 vs $3.44 est</span>
+      <span>ISG: $19.6B (+73% YoY)</span>
+    </div>
+    <p style="font-size:14px; margin-bottom:6px;">Full-year FY2026 revenue reached $113.5B, up 19%, the highest in company history. Full-year EPS was $10.30, up 27%, also a record. Annual cash flow exceeded $11B. The ISG division recorded its eighth consecutive quarter of double-digit revenue growth.</p>
+    <p style="font-size:14px; margin-bottom:0;">The FY2027 guidance is the number that matters: revenue of $138-142B and EPS of $12.90, against a prior consensus near $10.56. A 22% upside surprise on forward earnings. If the market were rationally pricing AI infrastructure demand on Thursday night, Dell would be surging. The fact that futures are broadly lower tells you sentiment is not being driven by fundamentals right now. It is being driven by positioning and fear.</p>
+  </div>
+
+  <div class="earnings-result">
+    <div class="earnings-result-header">
+      <span class="earnings-ticker-large">NVDA &middot; Nvidia (Thursday Session)</span>
+      <span class="earnings-verdict miss">-5.5% Session &middot; Sell the News &middot; Worst Day Since April</span>
+    </div>
+    <div class="earnings-metrics">
+      <span>Beat: EPS $1.62 vs $1.53 &middot; Rev $68.13B vs $66.21B</span>
+      <span>Q1 Guide: $78B vs $72.8B est</span>
+      <span>Data Center: $62.3B (+75% YoY)</span>
+    </div>
+    <p style="font-size:14px; margin-bottom:0;">The result was extraordinary. The session was not. Nvidia suffered its worst single-day decline since April as investors took profits on a stock that had priced perfection. Jensen Huang intervened in a CNBC interview, arguing the market had mispriced software disruption and defending ServiceNow by name. The IGV software ETF has now fallen more than 10% in February. Huang's defense of the application layer is not altruistic: a software collapse reduces enterprise budgets available to buy Nvidia chips.</p>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<div class="section">
+  <div class="section-label">Investment Theses &middot; Three Positions to Watch</div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis I &middot; The 10-Year Below 4%</div>
+    <div class="thesis-title">Rates Are Telling a Different Story Than Equities</div>
+    <p>The US 10-year closed Thursday at 3.998%, below 4% for the first time since November 28. The 2-year fell to 3.420%, pricing additional Fed easing. Two readings are possible. First, investors are mechanically rotating from equities into Treasuries, and the bond rally is a consequence of equity selling rather than an independent growth signal. Second, the bond market is independently pricing a slowdown: high-profile tech layoffs, tariff uncertainty, and softening consumer sentiment are registering in growth expectations.</p>
+    <p style="margin-bottom:0;">The 2-year is the tell. At 3.420% and falling, it means the market is pricing more rate cuts than a week ago. If that continues through today's data, it is not just a positioning flush. PPI at 08:30 ET is the first test. A miss on PPI would accelerate the rate rally and put further pressure on equities. A beat would push back against the growth-slowdown thesis and potentially provide a floor for stocks.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis II &middot; Commodities Resilience</div>
+    <div class="thesis-title">Silver +3.81%. Copper +1.42%. The Anti-Dollar Trade Is Not Finished.</div>
+    <p>Silver bounced sharply overnight to $90.31 (+3.81%), recovering Wednesday's pullback entirely. Copper climbed to $6.1107 (+1.42%), approaching multi-year highs. Gold holds at $5,203 (+0.18%). These moves are happening against falling US yields, a weaker dollar (EUR/USD above 1.18), and continued tariff uncertainty. The commodity complex is not pricing recession. It is pricing sustained inflation, dollar debasement, and structural supply constraints. Copper's strength is a forward-looking signal on industrial demand that sits in direct tension with the recessionary read from falling bond yields. The market is running two contradictory macro pictures simultaneously. Both cannot be right.</p>
+    <p style="margin-bottom:0;">The JGB reversal overnight adds context. Japan 10Y fell 1.72%, 30Y fell 1.24%, 40Y fell 1.49%. Wednesday's spike is fully reversing. This reduces near-term pressure on Japanese institutional capital repatriation, which is a mild global positive for Treasuries and European bonds.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis III &middot; The SaaS Question After Huang's Intervention</div>
+    <div class="thesis-title">The Most Credible Voice in AI Just Defended the Application Layer</div>
+    <p>Jensen Huang's CNBC comment is the most significant SaaS-sector development of the week that did not involve an earnings report. His argument, that AI agents work with enterprise software rather than replacing it, is the bull case for CRM, WDAY, and NOW in a single sentence from the person most qualified to make it. Fundstrat's head of technical strategy separately said Salesforce "looks poised to bounce in the weeks ahead." Snowflake rose 2.3% Thursday after Citi raised its price target to $280, citing AI momentum.</p>
+    <p style="margin-bottom:0;">None of this settles the structural question. IGV is still down more than 10% in February. Workday remains sharply lower. The thesis in our <a href="https://substack.com/home/post/p-188803679" class="accent-link">Part I</a> and <a href="https://substack.com/home/post/p-188806163" class="accent-link">Part II</a> analysis argued that the disruption risk is real and underpriced. Huang's intervention sets a narrative floor, not a structural one. The data will settle this over the next two to three earnings cycles. His quote is a starting point for mean reversion, not a resolution.</p>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<div class="section">
+  <div class="section-label">Calendar &middot; Friday, February 27, 2026</div>
+  <div class="cal-row">
+    <div class="cal-time">08:30 ET</div>
+    <div class="cal-event">Producer Price Index (PPI) &middot; January <span class="cal-flag red">High Impact</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">09:45 ET</div>
+    <div class="cal-event">Chicago PMI &middot; February <span class="cal-flag">Medium</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">10:00 ET</div>
+    <div class="cal-event">University of Michigan Consumer Sentiment &middot; Final February <span class="cal-flag gold">Watch</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">US-Iran nuclear talks continue in Vienna <span class="cal-flag">Geopolitical</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">Close</div>
+    <div class="cal-event">End of February &middot; Monthly rebalancing flows active <span class="cal-flag gold">Positioning</span></div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<div class="section">
+  <div class="section-label">Today's Setup</div>
+  <h2>Month-End Friday With PPI and a Market That Is Processing Fear</h2>
+  <p>Today is the last trading day of February. Month-end rebalancing is a real mechanical force: pension funds and balanced funds that have seen bond allocations shrink relative to equities during February's tech selloff may be forced sellers of equities and buyers of bonds today, regardless of the news flow. This would extend the rate rally and add pressure to stocks at the open.</p>
+  <p>PPI at 08:30 is the morning's primary data point. The January print reflects pre-tariff conditions, which means any upside surprise indicates inflation was already accelerating before the 15% levy. That combination, pre-existing inflation plus incoming tariff-driven cost pressures, would be the most uncomfortable scenario for the Fed: stagflationary pressure with a slowing growth picture. A downside print would confirm the bond market's growth-slowdown thesis and likely accelerate the Treasury rally.</p>
+  <p style="margin-bottom:0;">Consumer sentiment at 10:00 rounds out the picture. If the Michigan final print has deteriorated further since the preliminary reading, it adds to the weight of evidence that the tariff uncertainty and tech sector anxiety are feeding through to the consumer. Watch for the tariff section of the sentiment survey specifically; anecdotal reports suggest tariff-related anxiety is now showing up in household survey responses for the first time.</p>
+</div>
+
+<div class="pullquote">
+  "The market is very much in prove-it mode, and Nvidia just didn't quite prove it with these earnings."
+  <div class="pullquote-attr">Tom Graff, Facet Chief Investment Officer &middot; February 26, 2026</div>
+</div>
+
+<div class="footer">
+  <p>Open Range Capital Research &middot; Morning Brief &middot; Friday, February 27, 2026</p>
+  <p>SaaS disruption analysis: <a href="https://substack.com/home/post/p-188803679" class="accent-link">Part I: The Structural Revaluation in Application Software</a> &middot; <a href="https://substack.com/home/post/p-188806163" class="accent-link">Part II: Blue Owl and the Credit Market Dimension</a></p>
+  <p style="margin-top:10px;">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements. This document is for institutional research purposes. Not investment advice.</p>
+</div>
+
+</body>
+</html>
