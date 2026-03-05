@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Range Capital Research - Morning Brief March 5, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e0e;
+    --paper: #f5f0e8;
+    --cream: #ede8dc;
+    --accent: #c8392b;
+    --gold: #b8860b;
+    --muted: #6b6258;
+    --rule: #c9bfaf;
+    --green: #1a6644;
+    --red: #c8392b;
+    --blue: #1a3a5c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+  .masthead { border-bottom: 3px solid var(--ink); padding: 36px 0 20px; text-align: center; }
+  .masthead-top { display: flex; justify-content: space-between; align-items: baseline; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .publication-name { font-family: 'DM Serif Display', serif; font-size: 42px; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+  .publication-sub { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .headline-strip { background: var(--ink); color: var(--paper); padding: 14px 20px; margin: 0 -24px; display: flex; gap: 32px; align-items: center; overflow: hidden; }
+  .strip-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+  .strip-text { font-family: 'DM Mono', monospace; font-size: 12px; color: #e8e0d0; white-space: nowrap; animation: scroll-text 75s linear infinite; }
+  @keyframes scroll-text { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .section { margin-top: 40px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px; margin-bottom: 18px; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
+  h2 { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+  .deck { font-size: 18px; line-height: 1.55; color: #2a2520; margin-bottom: 20px; font-style: italic; }
+  .byline { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 32px; }
+  p { margin-bottom: 14px; }
+  hr.section-rule { border: none; border-top: 1px solid var(--rule); margin: 32px 0; }
+  .market-table { width: 100%; border-collapse: collapse; font-family: 'DM Mono', monospace; font-size: 13px; margin-top: 4px; }
+  .market-table th { text-align: left; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 6px 8px; border-bottom: 2px solid var(--ink); }
+  .market-table td { padding: 8px 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .market-table tr:last-child td { border-bottom: none; }
+  .market-table .category { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-top: 14px; padding-bottom: 2px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .tag-note { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+  .thesis-box { border-left: 3px solid var(--accent); padding: 16px 20px; background: var(--cream); margin-bottom: 16px; }
+  .thesis-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .thesis-title { font-family: 'DM Serif Display', serif; font-size: 17px; margin-bottom: 8px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 4px; }
+  .stat-box { background: var(--cream); border: 1px solid var(--rule); padding: 12px 14px; }
+  .stat-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .stat-value { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1.1; margin-bottom: 2px; }
+  .stat-change { font-family: 'DM Mono', monospace; font-size: 11px; }
+  .divergence-box { border: 2px solid var(--blue); background: var(--cream); padding: 18px 20px; margin: 24px 0; }
+  .divergence-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+  .divergence-row { display: flex; gap: 0; border: 1px solid var(--rule); margin-bottom: 1px; }
+  .divergence-cell { flex: 1; padding: 10px 12px; border-right: 1px solid var(--rule); }
+  .divergence-cell:last-child { border-right: none; }
+  .divergence-cell-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .divergence-cell-val { font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 500; }
+  .divergence-cell-sub { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .cal-row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+  .cal-row:last-child { border-bottom: none; }
+  .cal-time { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); min-width: 100px; padding-top: 2px; }
+  .cal-event { flex: 1; }
+  .cal-flag { font-family: 'DM Mono', monospace; font-size: 10px; background: var(--ink); color: var(--paper); padding: 2px 6px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+  .cal-flag.red { background: var(--accent); }
+  .cal-flag.gold { background: var(--gold); }
+  .pullquote { border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 20px 0; margin: 32px 0; font-family: 'DM Serif Display', serif; font-size: 22px; font-style: italic; line-height: 1.35; color: var(--blue); }
+  .pullquote-attr { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+  .footer { border-top: 3px solid var(--ink); margin-top: 60px; padding-top: 20px; font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; line-height: 1.8; }
+  .accent-link { color: var(--accent); text-decoration: none; }
+  .data-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 10px; font-style: italic; }
+  .yield-ladder { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 16px 0; }
+  .yield-cell { background: var(--cream); padding: 10px 12px; }
+  .yield-cell-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+  .yield-cell-val { font-family: 'DM Serif Display', serif; font-size: 20px; }
+  .yield-cell-chg { font-family: 'DM Mono', monospace; font-size: 11px; margin-top: 1px; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Open Range Capital Research</span>
+    <span>Thursday, March 5, 2026</span>
+    <span>Morning Brief</span>
+  </div>
+  <div class="publication-name">Morning Brief</div>
+  <div class="publication-sub">Markets &middot; Macro &middot; Investment Research</div>
+</div>
+
+<div class="headline-strip">
+  <span class="strip-label">Day 6</span>
+  <span class="strip-text">S&P +0.78% Wednesday &middot; Nasdaq +1.29% &middot; US 10Y 4.117% highest of the crisis &middot; 2Y 3.570% +2.7bp &middot; WTI $76.33 +2.24% &middot; Oil not buying Trump pledge &middot; Bitcoin $72,539 +1.43% &middot; Ethereum +2.38% &middot; DAX -0.02% &middot; Japan 10Y 2.147% +1.42% &middot; Gilt -0.37% still selling &middot; Heating Oil +4.00% &middot; Gold $5,172 recovering &middot; S&P +0.78% Wednesday &middot; US 10Y 4.117% highest of the crisis &middot; WTI $76.33 Oil not buying Trump pledge</span>
+</div>
+
+<!-- LEDE -->
+<div class="section">
+  <div class="section-label">Analysis</div>
+
+  <h1>Equities Rallied on Wednesday. Every Bond Market in the World Sold Off. One of Them Is Wrong.</h1>
+
+  <p class="deck">The S&P gained 0.78% Wednesday. The Nasdaq gained 1.29%. Simultaneously, the US 10Y yield rose to 4.117%, its highest level of the entire crisis. The 2Y rose to 3.570%. Every segment of the US yield curve moved higher on a day when equities recovered. Oil rose another 2.24% to $76.33 WTI. Bitcoin surged 1.43% to $72,539. The Trump escort pledge is now 36 hours old. Oil does not believe it. Bonds do not believe it. Two of the three major asset classes are pricing a continued energy shock and sustained inflation. Equities are pricing relief. One of them is materially wrong.</p>
+
+  <p class="byline">Open Range Capital Research &middot; Marcus Drauschke &middot; March 5, 2026</p>
+
+  <p>Wednesday's equity recovery was structurally different from Monday's intraday reversal, which was driven by sector rotation into defense and energy at the expense of everything else. Wednesday saw a broader lift: the Nasdaq gained 1.29%, led by software and AI names recovering from oversold levels, the small cap Russell 2000 gained 1.06%, and even the DAX essentially flatlined at -0.02% after a 3.44% collapse Tuesday. This looks, on the surface, like genuine stabilisation.</p>
+
+  <p>The bond market does not share that read. The US 10Y yield at 4.117% is the highest print of this entire crisis run. From last Thursday's sub-4% level to 4.117% today is 17+ basis points of yield increase over five trading sessions. The 30Y is at 4.756%, the 2Y is at 3.570%. Every single tenor is moving in the same direction: higher. Equities rallying while every part of the yield curve rises is a contradiction. Either equities are wrong to celebrate because the bond market is correctly pricing an inflationary supply shock that will compress multiples and slow earnings growth, or bonds are wrong because the Trump Hormuz pledge will de-escalate the oil shock faster than fixed income is pricing. The evidence so far favors the bond market's read: WTI rose another 2.24% to $76.33 on Wednesday. Brent is at $82.94. Neither market is pricing de-escalation in energy.</p>
+
+  <p>The Japan yield complex confirms the bond market's global conviction. The 10Y JGB rose 1.42% to 2.147%. The 30Y rose to 3.387%. The 40Y rose 0.17% to 3.586%, a new crisis high. Japanese bonds have been rising in yield for five consecutive sessions now, in lockstep with US Treasuries and European sovereigns. This is not a regional idiosyncrasy; it is a coordinated global fixed income selloff driven by a single macro conclusion: energy-driven inflation in a world of 15% tariffs on goods is a problem that central banks cannot solve with rate cuts, and markets are removing rate-cut premium from sovereign curves across every major economy simultaneously.</p>
+
+  <p>Bitcoin's move to $72,539, a 1.43% gain at a time when the broader macro environment is under pressure, deserves more analytical attention than it typically receives in institutional research. Bitcoin has now outperformed every equity index over the last five sessions of the conflict. In the same period, it has decoupled from Ethereum's underperformance in a way that mirrors the gold-silver divergence noted earlier this week: Bitcoin holding its store-of-value characteristics while higher-beta crypto assets (Ethereum +2.38% Wednesday is a recovery after days of underperformance) show more volatile behavior. The parallel to gold is not perfect but it is observable. Bitcoin is behaving as a geopolitical hedge asset rather than a risk-asset this week, in the same way gold is. If that behavioral pattern holds, it has meaningful implications for how institutional allocators begin to think about Bitcoin in a wartime macro regime.</p>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- THE CENTRAL DIVERGENCE -->
+<div class="section">
+  <div class="section-label">The Central Divergence &middot; Day 6 of the Crisis</div>
+  <h2>Two Asset Classes, Two Different Crisis Reads</h2>
+
+  <div class="divergence-box">
+    <div class="divergence-label">Equity Signal vs. Bond Signal &middot; Wednesday March 4 Close</div>
+    <div class="divergence-row">
+      <div class="divergence-cell">
+        <div class="divergence-cell-label">S&P 500</div>
+        <div class="divergence-cell-val up">+0.78%</div>
+        <div class="divergence-cell-sub">Relief. De-escalation priced.</div>
+      </div>
+      <div class="divergence-cell">
+        <div class="divergence-cell-label">US 10Y Yield</div>
+        <div class="divergence-cell-val up">4.117% &nbsp;+0.034</div>
+        <div class="divergence-cell-sub">Highest of the crisis. No relief priced.</div>
+      </div>
+    </div>
+    <div class="divergence-row">
+      <div class="divergence-cell">
+        <div class="divergence-cell-label">Nasdaq</div>
+        <div class="divergence-cell-val up">+1.29%</div>
+        <div class="divergence-cell-sub">Tech recovering. Optimism.</div>
+      </div>
+      <div class="divergence-cell">
+        <div class="divergence-cell-label">WTI Crude</div>
+        <div class="divergence-cell-val up">$76.33 &nbsp;+2.24%</div>
+        <div class="divergence-cell-sub">Day 6 of war premium. Still rising.</div>
+      </div>
+    </div>
+    <div class="divergence-row">
+      <div class="divergence-cell">
+        <div class="divergence-cell-label">VIX close</div>
+        <div class="divergence-cell-val">21.37</div>
+        <div class="divergence-cell-sub">Fear receding at the margin.</div>
+      </div>
+      <div class="divergence-cell">
+        <div class="divergence-cell-label">US 2Y Yield</div>
+        <div class="divergence-cell-val up">3.570% &nbsp;+0.027</div>
+        <div class="divergence-cell-sub">Rate-cut pricing still exiting the curve.</div>
+      </div>
+    </div>
+    <p style="font-size:13px; font-family:'DM Mono',monospace; color:var(--muted); padding:12px 0 0; margin:0;">Equities are pricing the Trump pledge. Oil and bonds are pricing the convoy math.</p>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- KEY NUMBERS -->
+<div class="section">
+  <div class="section-label">Key Numbers &middot; Thursday Morning</div>
+  <div class="two-col">
+    <div class="stat-box">
+      <div class="stat-label">US 10Y &middot; Crisis High</div>
+      <div class="stat-value">4.117%</div>
+      <div class="stat-change up">+0.034 &middot; +0.83% &middot; 17bp above pre-crisis level</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Bitcoin &middot; Decoupling</div>
+      <div class="stat-value">$72,539</div>
+      <div class="stat-change up">+$1,025 &middot; +1.43% &middot; Geopolitical hedge behavior</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">WTI &middot; Pledge Not Priced</div>
+      <div class="stat-value">$76.33</div>
+      <div class="stat-change up">+$1.67 &middot; +2.24% &middot; Still rising on Day 6</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Japan 10Y &middot; Cumulative</div>
+      <div class="stat-value">2.147%</div>
+      <div class="stat-change up">+0.030 &middot; +1.42% &middot; Five sessions of consecutive rise</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- MARKET SNAPSHOT -->
+<div class="section">
+  <div class="section-label">Market Snapshot</div>
+  <h2>Market Snapshot</h2>
+  <p style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:16px;">Open Range Capital Research &middot; Marcus Drauschke &middot; March 5, 2026</p>
+
+  <table class="market-table">
+    <thead><tr><th>Instrument</th><th>Level</th><th>Change</th><th>Note</th></tr></thead>
+    <tbody>
+
+      <tr><td colspan="4" class="category">US Equity &middot; Wednesday March 4 Close</td></tr>
+      <tr><td>Dow Jones</td><td>48,739.41</td><td class="up">+238.14 &middot; +0.49%</td><td></td></tr>
+      <tr><td>S&amp;P 500</td><td>6,869.50</td><td class="up">+52.87 &middot; +0.78%</td><td><span class="tag-note">Broad recovery; all sectors participating</span></td></tr>
+      <tr><td>Nasdaq</td><td>22,807.48</td><td class="up">+290.79 &middot; +1.29%</td><td><span class="tag-note">Software and AI recovery; tech leading</span></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,636.01</td><td class="up">+27.65 &middot; +1.06%</td><td></td></tr>
+      <tr><td>S&amp;P 500 VIX</td><td>21.37</td><td class="up">+0.19 &middot; +0.90%</td><td><span class="tag-note">Still elevated; pre-crisis was ~18</span></td></tr>
+      <tr><td>DAX</td><td>24,210.28</td><td class="down">-5.98 &middot; -0.02%</td><td><span class="tag-note">Stabilising after -3.44% Tuesday</span></td></tr>
+      <tr><td>Bovespa</td><td>185,366</td><td class="up">+2,262 &middot; +1.24%</td><td></td></tr>
+      <tr><td>MSCI World</td><td>4,494.33</td><td class="up">+6.88 &middot; +0.15%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Futures &middot; Live ~04:56 ET</td></tr>
+      <tr><td>US 30 (Dow)</td><td>48,648.8</td><td class="down">-90.6 &middot; -0.19%</td><td></td></tr>
+      <tr><td>US 500 (S&amp;P)</td><td>6,862.1</td><td class="down">-7.4 &middot; -0.11%</td><td><span class="tag-note">Giving back a fraction of Wednesday's +0.78%</span></td></tr>
+      <tr><td>US Tech 100 (NQ)</td><td>25,051.9</td><td class="down">-41.8 &middot; -0.17%</td><td></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,623.3</td><td class="down">-12.7 &middot; -0.48%</td><td></td></tr>
+      <tr><td>DAX</td><td>24,268.5</td><td class="up">+29.5 &middot; +0.12%</td><td><span class="tag-note">European futures holding; tentative stabilisation</span></td></tr>
+      <tr><td>CAC 40</td><td>8,187.7</td><td class="up">+7.2 &middot; +0.09%</td><td></td></tr>
+      <tr><td>FTSE 100</td><td>10,576.8</td><td class="up">+60.3 &middot; +0.57%</td><td></td></tr>
+      <tr><td>Euro Stoxx 50</td><td>5,887</td><td class="up">+8 &middot; +0.13%</td><td></td></tr>
+      <tr><td>VIX Futures</td><td>21.32</td><td class="up">+0.12 &middot; +0.56%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Commodities &middot; Live ~04:57 ET</td></tr>
+      <tr><td>Gold (Apr 26)</td><td>$5,172.24</td><td class="up">+$37.54 &middot; +0.73%</td><td><span class="tag-note">Structural bid returning; off ATH but recovering</span></td></tr>
+      <tr><td>Silver (May 26)</td><td>$84.225</td><td class="up">+$1.041 &middot; +1.25%</td><td><span class="tag-note">Recovering alongside gold; precious bid broadening</span></td></tr>
+      <tr><td>WTI Crude (Apr 26)</td><td>$76.33</td><td class="up">+$1.67 &middot; +2.24%</td><td><span class="tag-note">Trump pledge not moving oil; Hormuz risk embedded</span></td></tr>
+      <tr><td>Brent (May 26)</td><td>$82.94</td><td class="up">+$1.54 &middot; +1.89%</td><td><span class="tag-note">$83 Brent; Barclays $80 "material disruption" trigger passed</span></td></tr>
+      <tr><td>Heating Oil (Apr 26)</td><td>$3.4254</td><td class="up">+$0.1316 &middot; +4.00%</td><td><span class="tag-note">Refined product surge; downstream inflation impact</span></td></tr>
+      <tr><td>Gasoline RBOB (Apr 26)</td><td>$2.5824</td><td class="up">+$0.0675 &middot; +2.68%</td><td><span class="tag-note">Pump price pass-through accelerating</span></td></tr>
+      <tr><td>Natural Gas (Apr 26)</td><td>$2.960</td><td class="up">+$0.043 &middot; +1.47%</td><td></td></tr>
+      <tr><td>Copper (May 26)</td><td>$5.8567</td><td class="down">-$0.0507 &middot; -0.86%</td><td><span class="tag-note">First copper decline; growth slowdown read emerging</span></td></tr>
+      <tr><td>US Wheat (May 26)</td><td>$574.87</td><td class="up">+$5.88 &middot; +1.03%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Bond Yields &middot; Live ~04:55 ET</td></tr>
+      <tr><td>US 10Y</td><td>4.117%</td><td class="up">+0.034 &middot; +0.83%</td><td><span class="tag-note">Crisis high; 17bp above pre-crisis; rising with equities</span></td></tr>
+      <tr><td>US 30Y</td><td>4.756%</td><td class="up">+0.039 &middot; +0.83%</td><td><span class="tag-note">Long end rising as fast as short end</span></td></tr>
+      <tr><td>US 2Y</td><td>3.570%</td><td class="up">+0.027 &middot; +0.76%</td><td><span class="tag-note">Rate-cut premium being removed; Fed hold now base case</span></td></tr>
+      <tr><td>Japan 10Y</td><td>2.147%</td><td class="up">+0.030 &middot; +1.42%</td><td><span class="tag-note">Five sessions of consecutive yield rise</span></td></tr>
+      <tr><td>Japan 30Y</td><td>3.387%</td><td class="up">+0.030 &middot; +0.89%</td><td></td></tr>
+      <tr><td>Japan 40Y</td><td>3.586%</td><td class="up">+0.006 &middot; +0.17%</td><td><span class="tag-note">New crisis high for the 40Y</span></td></tr>
+      <tr><td>Euro Bund</td><td>127.89</td><td class="down">-0.07 &middot; -0.06%</td><td></td></tr>
+      <tr><td>UK Gilt</td><td>91.92</td><td class="down">-0.34 &middot; -0.37%</td><td><span class="tag-note">Still selling off; fourth consecutive declining session</span></td></tr>
+
+      <tr><td colspan="4" class="category">FX &middot; Live ~04:57 ET</td></tr>
+      <tr><td>EUR/USD</td><td>1.1616</td><td class="down">-0.0016 &middot; -0.14%</td><td></td></tr>
+      <tr><td>USD/JPY</td><td>157.18</td><td class="up">+0.12 &middot; +0.08%</td><td><span class="tag-note">Yen holding; BoJ intervention watch zone</span></td></tr>
+      <tr><td>GBP/USD</td><td>1.3345</td><td class="down">-0.0028 &middot; -0.21%</td><td></td></tr>
+      <tr><td>AUD/USD</td><td>0.7042</td><td class="down">-0.0032 &middot; -0.45%</td><td><span class="tag-note">Commodity currency still under pressure</span></td></tr>
+
+      <tr><td colspan="4" class="category">Crypto &middot; Live ~04:56 ET</td></tr>
+      <tr><td>Bitcoin</td><td>$72,539.1</td><td class="up">+$1,025.4 &middot; +1.43%</td><td><span class="tag-note">Outperforming equity indices across 5 sessions</span></td></tr>
+      <tr><td>Ethereum</td><td>$2,124.04</td><td class="up">+$49.29 &middot; +2.38%</td><td></td></tr>
+      <tr><td>Solana</td><td>$91.141</td><td class="up">+$0.593 &middot; +0.66%</td><td></td></tr>
+      <tr><td>XRP</td><td>$1.4286</td><td class="up">+$0.0128 &middot; +0.90%</td><td></td></tr>
+
+    </tbody>
+  </table>
+  <p class="data-note">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements &middot; March 5, 2026</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- YIELD LADDER -->
+<div class="section">
+  <div class="section-label">The Yield Ladder &middot; Five Sessions of Uninterrupted Rise</div>
+  <h2>Every Maturity. Every Country. All Moving in the Same Direction.</h2>
+  <p>What is now a five-session global sovereign bond selloff is not a technical event. It is the fixed income world's collective answer to a single question: can a central bank cut rates into $76 WTI crude, $83 Brent, heating oil at $3.43, and gasoline at $2.58, on top of a 15% tariff regime? The answer being priced is no.</p>
+
+  <div class="yield-ladder">
+    <div class="yield-cell">
+      <div class="yield-cell-label">US 2Y</div>
+      <div class="yield-cell-val">3.570%</div>
+      <div class="yield-cell-chg up">+2.7bp today &middot; +15bp crisis</div>
+    </div>
+    <div class="yield-cell">
+      <div class="yield-cell-label">US 10Y</div>
+      <div class="yield-cell-val">4.117%</div>
+      <div class="yield-cell-chg up">+3.4bp today &middot; +17bp crisis</div>
+    </div>
+    <div class="yield-cell">
+      <div class="yield-cell-label">US 30Y</div>
+      <div class="yield-cell-val">4.756%</div>
+      <div class="yield-cell-chg up">+3.9bp today &middot; Crisis high</div>
+    </div>
+    <div class="yield-cell">
+      <div class="yield-cell-label">Japan 10Y</div>
+      <div class="yield-cell-val">2.147%</div>
+      <div class="yield-cell-chg up">+3.0bp &middot; Session 5 of rise</div>
+    </div>
+    <div class="yield-cell">
+      <div class="yield-cell-label">Japan 30Y</div>
+      <div class="yield-cell-val">3.387%</div>
+      <div class="yield-cell-chg up">+3.0bp &middot; Accelerating</div>
+    </div>
+    <div class="yield-cell">
+      <div class="yield-cell-label">UK Gilt 10Y</div>
+      <div class="yield-cell-val">91.57</div>
+      <div class="yield-cell-chg down">-0.34 price &middot; Session 4</div>
+    </div>
+  </div>
+  <p>The shape of the US curve matters here. The 2Y and 30Y are rising at almost identical pace: +0.027 and +0.039 respectively. This is not a steepening driven by growth optimism, which would show the long end rising faster than the short end as markets price in future growth. It is a parallel shift upward across the entire curve, which is the signature of expected sustained inflation rather than cyclical recovery. The Fed cannot control this with standard tools. They can set the short rate, but a parallel curve shift means the market is telling them that wherever they set the short rate, the inflation environment will force it higher over time.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- THREE THESES -->
+<div class="section">
+  <div class="section-label">Investment Theses &middot; Three Frameworks for Day 6</div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis I &middot; Oil Is the Tell</div>
+    <div class="thesis-title">WTI at $76.33 on Day 6 Means the Pledge Has Not Worked. Brent at $83 Has Passed Barclays' "Material Disruption" Threshold.</div>
+    <p>The single most important verification mechanism for Trump's Hormuz escort pledge is the oil price. If the market believed the escort commitment was credible and would prevent any meaningful Strait disruption, oil would be falling toward its pre-conflict level of $65-66. Instead, WTI is at $76.33 and Brent has crossed $83, the threshold that Barclays identified at the start of the week as consistent with a "material disruption" scenario. Oil is not pricing the pledge; it is pricing the convoy math.</p>
+    <p style="margin-bottom:0;">This has direct earnings implications that are not yet fully reflected in equity valuations. Every dollar of sustained WTI above $70 is a direct cost input increase for airlines, chemicals, plastics, shipping, manufacturing, and consumer staples. The pass-through to consumer price indices takes approximately 6-8 weeks from crude to pump. Gasoline RBOB at $2.58 is already 2.68% higher on the day. Heating oil at $3.43 is 4.00% higher. These are not abstract macro signals; they are the beginning of a Q2 earnings headwind that equity analysts have not yet revised for. The S&P 500's Wednesday recovery was driven by relief. The Q2 earnings revision cycle, which begins in April, will be driven by margin compression math.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis II &middot; Bitcoin as Geopolitical Hedge</div>
+    <div class="thesis-title">Bitcoin $72,539, Up 1.43% on a Risk-Off Day With Rising Yields. The Behavioral Shift Is Now Five Sessions Old and Persistent.</div>
+    <p>Bitcoin has outperformed every major equity index across this entire crisis. The S&P is down roughly 0.5% net from the Friday before the strikes. Bitcoin is up significantly over the same period. This is not the behavior of a risk asset correlated to equities. It is the behavior of a store-of-value asset that benefits from geopolitical uncertainty and dollar debasement concerns in the same way gold does, which has held above $5,150 despite a $250 pullback from its all-time high.</p>
+    <p style="margin-bottom:0;">The internal crypto market structure reinforces this reading. Bitcoin outperforming Ethereum, Solana, and XRP in a general crypto recovery is the digital equivalent of gold outperforming silver in a precious metals rally. It reflects flight to the highest-credibility store of value within the asset class rather than a speculative risk-on rotation into altcoins. If this behavioral pattern is durable, it has portfolio construction implications: Bitcoin in a crisis-driven inflationary regime behaves more like a 0.5% gold allocation than a 0.5% Nasdaq allocation. That is a categorically different risk profile than most institutional mandates currently assume when they classify crypto as "risk assets."</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis III &middot; The Fed Meeting Is Now the Most Important Date on the Calendar</div>
+    <div class="thesis-title">March 17-18 FOMC. Powell Has No Good Move. The Market Knows It. The Curve Is Pricing the Trap.</div>
+    <p>The Fed's next scheduled meeting is March 17-18. Entering this week, the market was pricing approximately two rate cuts for 2026. The 2Y yield at 3.570% is now pricing something closer to one cut, maybe none. The parallel yield curve shift across all tenors is the bond market removing the "insurance cut" premium it had been giving the Fed in anticipation of slowing growth. That premium is gone because the bond market now believes that any Fed cut into a $76 WTI environment with heating oil at $3.43 and gasoline rising 2.68% in a single session would be read as an inflation capitulation, not a growth-supportive ease.</p>
+    <p style="margin-bottom:0;">JPMorgan's public call that the Fed may hold through H1 2026 is looking increasingly well-positioned. Powell at the March press conference faces an impossible communications challenge: acknowledge the growth risk from the energy shock without signaling a willingness to cut rates into it, while simultaneously not appearing hawkish in a way that tightens financial conditions further into an already-stressed equity market. There is no clean language for that. The Fed's dot plot for March will be one of the most closely read documents of 2026 because it will be the first institutional macro forecast that has to incorporate the Iran war shock into its forward path. Whatever the dots show, they will be out of date within weeks if the conflict trajectory changes. That uncertainty itself is a market variable that the VIX at 21 is not fully capturing. Pre-crisis VIX was ~18. The options market is not yet pricing the FOMC communication risk as a distinct volatility event on top of the geopolitical base.</p>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- COPPER NOTE -->
+<div class="section">
+  <div class="section-label">Reading the Data &middot; The Copper Reversal</div>
+  <h2>Copper -0.86% Wednesday. First Meaningful Decline of the Week. The Growth Read Is Shifting.</h2>
+  <p>Copper's 0.86% decline on Wednesday, the first meaningful pullback of the crisis week, is a subtle but important shift in the commodity signal set. For the first four sessions, copper's resilience near $5.90 was interpreted as evidence that industrial demand expectations were not collapsing alongside equities, consistent with a stagflation read rather than a recession read. A small single-session decline does not reverse that interpretation, but it introduces a question: is the growth slowdown component of the shock beginning to outweigh the supply-disruption inflation component in industrial metals pricing?</p>
+  <p style="margin-bottom:0;">The commodity complex is now splitting into two camps. Energy and precious metals are rising on geopolitical and inflation grounds. Industrial metals, copper and soybeans both slightly lower, are beginning to price demand destruction. This is a classic late-stage stagflationary signal: inflation assets rise, growth assets fall, and the central bank is powerless to address either without worsening the other. The March 17 Fed meeting will be the first official policy response to exactly this configuration.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- CALENDAR -->
+<div class="section">
+  <div class="section-label">Calendar &middot; Thursday, March 5, 2026</div>
+  <div class="cal-row">
+    <div class="cal-time">08:30 ET</div>
+    <div class="cal-event">Initial Jobless Claims &middot; Week ending Feb 28 <span class="cal-flag gold">Watch</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">Fed speakers &middot; First post-crisis batch with sufficient data to comment <span class="cal-flag red">High Impact</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">Hormuz tanker traffic &middot; Navy escort operational confirmation or absence <span class="cal-flag red">Priority</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">Iran successor government posture &middot; Escalation vs. negotiation signals <span class="cal-flag red">Priority</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">Friday</div>
+    <div class="cal-event">Non-Farm Payrolls &middot; February &middot; First labor market read post-conflict <span class="cal-flag red">Week's Most Important</span></div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<div class="section">
+  <div class="section-label">Opening Setup &middot; Thursday March 5</div>
+  <h2>The NFP Setup and Why Friday's Number Is More Important Than Usual</h2>
+  <p>Friday's February Non-Farm Payrolls release is the most important economic data point of the week, and its importance is elevated well beyond a typical monthly labor report. Here is why: the NFP captures February employment, which precedes the strikes but postdates the tariff implementation. A strong labor market reading would typically support equity valuations and reduce recession risk pricing. In the current environment, a strong NFP is inflationary, it removes the last Fed cut narrative from the 2Y, it pushes yields higher, and it tightens the policy trap. A weak NFP reading, reflecting the tariff-driven slowdown that was already visible in February PMI data, would add a demand-shock layer on top of the supply-shock from oil, and complete the full stagflation configuration.</p>
+  <p style="margin-bottom:0;">There is no clean NFP read on Friday. Strong is inflationary and bad for bonds and rate-sensitive equities. Weak is deflationary and bad for cyclical equities and growth assets. The market is positioned for relief after Wednesday's bounce; a weak NFP could strip that recovery quickly. Thursday's jobless claims at 08:30 are the preview: any initial deterioration in the claims data would signal that the tariff slowdown was sharper than expected in February and set a cautious tone heading into Friday's headline number.</p>
+</div>
+
+<div class="pullquote">
+  Equities priced the pledge. Oil priced the convoy math. One of them has a 33-kilometer chokepoint and a five-day track record. The other has a Truth Social post.
+  <div class="pullquote-attr">Open Range Capital Research &middot; March 5, 2026</div>
+</div>
+
+<div class="footer">
+  <p>Open Range Capital Research &middot; Morning Brief &middot; Thursday, March 5, 2026</p>
+  <p>SaaS disruption analysis: <a href="https://substack.com/home/post/p-188803679" class="accent-link">Part I: The Structural Revaluation in Application Software</a> &middot; <a href="https://substack.com/home/post/p-188806163" class="accent-link">Part II: Blue Owl and the Credit Market Dimension</a></p>
+  <p style="margin-top:10px;">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements. This document is for institutional research purposes. Not investment advice.</p>
+</div>
+
+</body>
+</html>
