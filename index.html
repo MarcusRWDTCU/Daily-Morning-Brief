@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Range Capital Research - Morning Brief March 6, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e0e;
+    --paper: #f5f0e8;
+    --cream: #ede8dc;
+    --accent: #c8392b;
+    --gold: #b8860b;
+    --muted: #6b6258;
+    --rule: #c9bfaf;
+    --green: #1a6644;
+    --red: #c8392b;
+    --blue: #1a3a5c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+  .masthead { border-bottom: 3px solid var(--ink); padding: 36px 0 20px; text-align: center; }
+  .masthead-top { display: flex; justify-content: space-between; align-items: baseline; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .publication-name { font-family: 'DM Serif Display', serif; font-size: 42px; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+  .publication-sub { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .headline-strip { background: var(--ink); color: var(--paper); padding: 14px 20px; margin: 0 -24px; display: flex; gap: 32px; align-items: center; overflow: hidden; }
+  .strip-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+  .strip-text { font-family: 'DM Mono', monospace; font-size: 12px; color: #e8e0d0; white-space: nowrap; animation: scroll-text 80s linear infinite; }
+  @keyframes scroll-text { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .section { margin-top: 40px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px; margin-bottom: 18px; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
+  h2 { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+  .deck { font-size: 18px; line-height: 1.55; color: #2a2520; margin-bottom: 20px; font-style: italic; }
+  .byline { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 32px; }
+  p { margin-bottom: 14px; }
+  hr.section-rule { border: none; border-top: 1px solid var(--rule); margin: 32px 0; }
+  .alert-box { border: 2px solid var(--accent); background: var(--cream); padding: 18px 20px; margin-bottom: 24px; }
+  .alert-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .alert-items { list-style: none; padding: 0; }
+  .alert-items li { font-family: 'DM Mono', monospace; font-size: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
+  .alert-items li:last-child { border-bottom: none; }
+  .alert-dot { display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-right: 10px; vertical-align: middle; }
+  .market-table { width: 100%; border-collapse: collapse; font-family: 'DM Mono', monospace; font-size: 13px; margin-top: 4px; }
+  .market-table th { text-align: left; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 6px 8px; border-bottom: 2px solid var(--ink); }
+  .market-table td { padding: 8px 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .market-table tr:last-child td { border-bottom: none; }
+  .market-table .category { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-top: 14px; padding-bottom: 2px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .tag-note { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+  .thesis-box { border-left: 3px solid var(--accent); padding: 16px 20px; background: var(--cream); margin-bottom: 16px; }
+  .thesis-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .thesis-title { font-family: 'DM Serif Display', serif; font-size: 17px; margin-bottom: 8px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 4px; }
+  .stat-box { background: var(--cream); border: 1px solid var(--rule); padding: 12px 14px; }
+  .stat-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .stat-value { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1.1; margin-bottom: 2px; }
+  .stat-change { font-family: 'DM Mono', monospace; font-size: 11px; }
+  .nfp-box { border: 2px solid var(--blue); background: var(--cream); padding: 20px; margin: 24px 0; }
+  .nfp-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+  .nfp-scenario { border-bottom: 1px solid var(--rule); padding: 12px 0; }
+  .nfp-scenario:last-child { border-bottom: none; padding-bottom: 0; }
+  .nfp-scenario-head { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+  .kpler-box { border-left: 4px solid var(--gold); background: var(--cream); padding: 16px 20px; margin: 24px 0; }
+  .kpler-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .cal-row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+  .cal-row:last-child { border-bottom: none; }
+  .cal-time { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); min-width: 100px; padding-top: 2px; }
+  .cal-event { flex: 1; }
+  .cal-flag { font-family: 'DM Mono', monospace; font-size: 10px; background: var(--ink); color: var(--paper); padding: 2px 6px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+  .cal-flag.red { background: var(--accent); }
+  .cal-flag.gold { background: var(--gold); }
+  .pullquote { border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 20px 0; margin: 32px 0; font-family: 'DM Serif Display', serif; font-size: 22px; font-style: italic; line-height: 1.35; color: var(--blue); }
+  .pullquote-attr { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+  .footer { border-top: 3px solid var(--ink); margin-top: 60px; padding-top: 20px; font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; line-height: 1.8; }
+  .accent-link { color: var(--accent); text-decoration: none; }
+  .data-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 10px; font-style: italic; }
+  .week-strip { display: flex; gap: 0; border: 2px solid var(--ink); margin: 24px 0; overflow: hidden; }
+  .week-day { flex: 1; padding: 10px 8px; border-right: 1px solid var(--rule); text-align: center; }
+  .week-day:last-child { border-right: none; }
+  .week-day-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .week-day-val { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; }
+  .week-day.worst { background: #f5e8e8; }
+  .week-day.best { background: #e8f5ec; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Open Range Capital Research</span>
+    <span>Friday, March 6, 2026</span>
+    <span>Morning Brief</span>
+  </div>
+  <div class="publication-name">Morning Brief</div>
+  <div class="publication-sub">Markets &middot; Macro &middot; Investment Research</div>
+</div>
+
+<div class="headline-strip">
+  <span class="strip-label">NFP Day</span>
+  <span class="strip-text">Iran attacks tanker; Trump escort tested and failed Day 6 &middot; WTI $80.52 +20% on the week &middot; Brent $85.12 &middot; Dow -1.61% Thursday &middot; Small Cap -1.91% &middot; VIX intraday 25.84 &middot; NFP consensus 58k-65k at 08:30 ET &middot; UK Gilt five sessions of selling &middot; Fed rate cut pushed to September &middot; Japan 10Y 2.169% new crisis high &middot; Broadcom AI revenue +74% YoY &middot; China GDP target lowest since 1990s &middot; Strait effectively closed via insurance withdrawal &middot; Iran: "no reason to negotiate" &middot; Iran attacks tanker; WTI $80.52 &middot; NFP 08:30 ET today</span>
+</div>
+
+<!-- ALERT -->
+<div class="section">
+  <div class="section-label">Situation Update &middot; Friday March 6, 2026 &middot; ~02:00 ET &middot; Day 7</div>
+  <div class="alert-box">
+    <div class="alert-label">Thursday's Critical Developments</div>
+    <ul class="alert-items">
+      <li><span class="alert-dot"></span>Iran struck an oil tanker in the Gulf with a missile Thursday; WTI crossed $80, highest since July 2024; the Trump escort pledge faced its first direct test and a ship was hit</li>
+      <li><span class="alert-dot"></span>Reuters: Hundreds of ships remain stuck in the Persian Gulf despite the US Navy escort commitment</li>
+      <li><span class="alert-dot"></span>Iranian FM Abbas Araghchi: "We are not asking for a ceasefire. We don't see any reason why we should negotiate."</li>
+      <li><span class="alert-dot"></span>Energy Secretary Doug Burgum: White House weighing SPR release, fuel-blending waivers, and direct oil futures market intervention</li>
+      <li><span class="alert-dot"></span>Kpler vessel tracking: Strait effectively closed to commercial shipping through insurance withdrawal; Iranian and Chinese-flagged ships only</li>
+      <li><span class="alert-dot"></span>Broadcom (AVGO) reported AI chip revenue +74% YoY Thursday; stock +4.8%, rare earnings bright spot in the week</li>
+      <li><span class="alert-dot"></span>China set 2026 GDP growth target at 4.5-5%, lowest since the 1990s; separate growth headwind now layered on top of Iran shock</li>
+    </ul>
+  </div>
+</div>
+
+<!-- LEDE -->
+<div class="section">
+  <div class="section-label">Analysis</div>
+
+  <h1>Iran Hit a Tanker. The Trump Escort Pledge Met Its First Real Test on Day 6 and a Ship Was Struck. NFP Lands at 08:30.</h1>
+
+  <p class="deck">Thursday provided two facts that define this morning's setup. First: Iran fired a missile at an oil tanker in the Gulf, WTI crossed $80, and the Dow fell 1,100 points intraday before partially recovering. The escort pledge, now four days old, had not prevented the first actual attack on shipping. Second: February Non-Farm Payrolls print at 08:30 ET, with a consensus of 58k-65k, half of January's number. In this environment, both a strong and a weak NFP are bad for markets in different ways. European futures are green overnight. Oil is slightly off its highs. The week's final session opens with the most consequential data release of the entire crisis on top of an already-destabilised macro backdrop.</p>
+
+  <p class="byline">Open Range Capital Research &middot; Marcus Drauschke &middot; March 6, 2026</p>
+
+  <p>The tanker attack on Thursday is the most significant escalation since Monday's drone strikes on the US Embassy in Riyadh. The distinction matters: drones hitting a diplomatic compound is a political statement. A missile hitting a commercial oil vessel is an economic attack. It is the first direct test of whether the Trump escort commitment can function as a deterrent in an active conflict zone, and the answer the market received was: not yet. Hundreds of ships remain stuck in the Persian Gulf according to Reuters. The Navy escort infrastructure, which as noted in Wednesday's brief requires 6-9 destroyers and 3-4 mine countermeasure vessels for continuous convoy coverage, has not yet been stood up at scale. The tanker was hit in the interim.</p>
+
+  <p>The Kpler vessel tracking data is the most analytically rigorous assessment of the Hormuz situation now in the market. Their conclusion: the Strait is effectively closed to commercial shipping not through a physical blockade but through insurance withdrawal. War risk premiums have rendered the passage economically non-viable for most commercial operators. Iranian and Chinese-flagged vessels continue transiting; everyone else has stopped. This is the mechanism through which oil at $80 WTI is still an underpriced scenario. A formal physical closure of the Strait would be the next escalation tier and would push oil toward the $120-150 range that Kpler cited as a one-day disruption scenario at the start of the week. The effective insurance closure is producing supply disruption at a slower rate but the direction is the same.</p>
+
+  <p>Thursday's equity session was a textbook response to an oil shock reaching a psychologically significant price level. WTI crossed $80 intraday and the Dow fell 1,000 points in the same 30-minute window. The correlation was explicit: Dow down 1,000 points at the moment oil hit $80, as Reuters reported. The recovery from those lows to close -1.61% reflected relief as oil pulled back from intraday highs, not any improvement in the geopolitical picture. Small caps closed -1.91%, the worst performer of the session, as rate-sensitive and domestically-focused companies absorbed both the economic slowdown signal and the sustained high-yield environment simultaneously.</p>
+
+  <p>The structural exception to Thursday's selloff was Broadcom. AVGO gained 4.8% after reporting AI chip revenue up 74% year-over-year, the strongest single-name earnings signal of the week. The Broadcom result does two things: it confirms that hyperscaler AI capex is not being cut in the current environment, which is a positive data point for Nvidia's forward revenue, and it establishes that the AI infrastructure buildout has its own momentum independent of the geopolitical backdrop. The caveat, as noted earlier this week, is that a significant portion of hyperscaler Gulf infrastructure is now in an active conflict zone. The demand is intact; the geography is stressed. Those are two different risk factors and they are being conflated in the current market narrative.</p>
+
+  <p>Iran's foreign minister was direct on Thursday: no ceasefire, no negotiations. The successor government following Khamenei's death is asserting continuity of resistance posture. Dan Niles of Niles Investment Management framed the market's central question precisely on CNBC: short war of under a month means oil normalises and equities recover; medium-term conflict is a larger problem; a prolonged engagement means oil above $100 and probable global recession. That three-scenario framework is now the operative investment decision tree. The current oil price, WTI at $80, Brent at $85, is pricing a conflict somewhere between short and medium-term. The tanker attack on Day 7 is an incremental signal that short-term resolution is not the base case.</p>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- THE WEEK IN REVIEW -->
+<div class="section">
+  <div class="section-label">The Week That Was &middot; S&P 500 Day by Day</div>
+  <h2>A Week of Contradictions: Every Rally Faded. Every Bond Selloff Held.</h2>
+  <div class="week-strip">
+    <div class="week-day">
+      <div class="week-day-label">Mon Mar 2</div>
+      <div class="week-day-val down">-0.04%</div>
+    </div>
+    <div class="week-day worst">
+      <div class="week-day-label">Tue Mar 3</div>
+      <div class="week-day-val down">-0.94%</div>
+    </div>
+    <div class="week-day best">
+      <div class="week-day-label">Wed Mar 4</div>
+      <div class="week-day-val up">+0.78%</div>
+    </div>
+    <div class="week-day">
+      <div class="week-day-label">Thu Mar 5</div>
+      <div class="week-day-val down">-0.56%</div>
+    </div>
+    <div class="week-day">
+      <div class="week-day-label">Fri Mar 6</div>
+      <div class="week-day-val">NFP 08:30</div>
+    </div>
+  </div>
+  <p style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted);">Net S&P performance Mon-Thu: -0.76%. WTI performance same period: +14%. The bond market net move (10Y): from sub-4% to 4.143%. The market that was most correct this week was oil. The market that was most complacent was equities.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- NFP SCENARIOS -->
+<div class="section">
+  <div class="section-label">Today's Catalyst &middot; Non-Farm Payrolls &middot; February &middot; 08:30 ET</div>
+  <h2>No Clean Read. Three Scenarios, Three Different Market Problems.</h2>
+  <p>Consensus: 58k-65k (vs. 130k January). Unemployment expected: 4.4%. Average hourly earnings: +0.4% month-over-month. This is a pre-conflict February number, meaning it captures the tariff slowdown but not the Iran war. The number's interpretation depends entirely on which risk the market is currently more afraid of: inflation or growth.</p>
+
+  <div class="nfp-box">
+    <div class="nfp-label">NFP Scenario Matrix &middot; March 6, 2026 &middot; 08:30 ET</div>
+
+    <div class="nfp-scenario">
+      <div class="nfp-scenario-head up">Scenario A &middot; Strong Beat (&gt;100k) &middot; Bullish for Growth, Bearish for Rates</div>
+      <p style="font-size:14px; margin-bottom:0;">A big number confirms labor market resilience and reduces recession fear. But in a $80 WTI environment with heating oil up 4% in a single session, a strong jobs print removes the last rationale for Fed cuts entirely. The 2Y would move sharply higher, the curve would flatten further, and rate-sensitive equities (small caps, REITs, homebuilders) would underperform. The "Goldilocks" scenario that equities want does not exist in this inflation context. Strong NFP is good for earnings expectations and bad for the discount rate at the same time.</p>
+    </div>
+
+    <div class="nfp-scenario">
+      <div class="nfp-scenario-head" style="color:var(--gold);">Scenario B &middot; In-Line (58k-80k) &middot; Ambiguous, Market Leans Green</div>
+      <p style="font-size:14px; margin-bottom:0;">A result in or slightly above consensus is probably the mildest market mover. It confirms the tariff-driven labor slowdown that has been visible in PMI data without shocking in either direction. Markets likely drift higher on relief that the worst growth fears are not confirmed in the data. This is the setup European futures appear to be pricing with DAX +0.86% and S&P futures +0.10% overnight. The risk is that in-line 60k is read as "already below 100k is weak enough." Context determines interpretation.</p>
+    </div>
+
+    <div class="nfp-scenario">
+      <div class="nfp-scenario-head down">Scenario C &middot; Miss (&lt;50k) &middot; Growth Shock Confirmed. Stagflation Completed.</div>
+      <p style="font-size:14px; margin-bottom:0;">A print below 50k would confirm that the tariff drag was sharper than expected in February, before the Iran shock added the oil cost channel. The stagflation configuration becomes fully explicit: oil at $80, yields rising, labor market cooling, Fed unable to cut. This is the scenario that produces the worst equity outcomes because it means neither the growth nor the inflation side of the equation is benign. Small caps and consumer discretionary bear the heaviest impact. The 2Y might rally briefly on "forced cut" pricing before the inflation channel reasserts itself. This is the scenario Dan Niles' medium-term conflict framework implies is in view.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- KPLER INSURANCE CLOSURE -->
+<div class="section">
+  <div class="section-label">The Hormuz Picture &middot; Kpler Intelligence</div>
+  <div class="kpler-box">
+    <div class="kpler-label">Kpler Vessel Tracking &middot; March 5, 2026 &middot; Effective Closure via Insurance</div>
+    <p style="font-size:14px; margin-bottom:10px;">The Strait of Hormuz is not formally closed. Vessel tracking shows limited traffic continuing: primarily Iranian and Chinese-flagged ships. Commercial operators, major oil companies, and insurers have effectively withdrawn from the corridor. War risk premiums make the passage economically non-viable for most standard commercial voyages.</p>
+    <p style="font-size:14px; margin-bottom:10px;">Saudi Arabia's East-West Pipeline (capacity: 7 million barrels per day) and the UAE's Fujairah pipeline offer partial alternatives, but terminal infrastructure at Jeddah limits throughput. These routes sustain a portion of displaced volume but cannot offset a full effective closure.</p>
+    <p style="font-size:14px; margin-bottom:0;"><strong>The competitive beneficiary:</strong> Russia. With Middle East barrels facing logistical disruption, India and China face strong incentives to deepen reliance on Russian crude. India is the most acute near-term case and is likely pivoting immediately. China, which had been moderating Russian crude intake, is expected to reverse that restraint if the conflict extends. The US Treasury has already signalled this dynamic with a 30-day waiver granted Thursday for India's purchase of Russian oil, a tacit acknowledgement that fighting a war on the Iranian energy front while maintaining Russian oil sanctions simultaneously is not operationally coherent.</p>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- KEY NUMBERS -->
+<div class="section">
+  <div class="section-label">Key Numbers &middot; Friday Morning</div>
+  <div class="two-col">
+    <div class="stat-box">
+      <div class="stat-label">WTI &middot; Post-Tanker Attack</div>
+      <div class="stat-value">$80.52</div>
+      <div class="stat-change up">+$1.67 &middot; +2.24% &middot; +20% on the week</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">NFP Consensus &middot; Today 08:30 ET</div>
+      <div class="stat-value">58k-65k</div>
+      <div class="stat-change down">vs. 130k January &middot; Pre-conflict read</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">UK Gilt &middot; Five Sessions</div>
+      <div class="stat-value">91.37</div>
+      <div class="stat-change down">-0.95 &middot; -1.03% &middot; Cumulative -5.3% this week</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Japan 10Y &middot; New Crisis High</div>
+      <div class="stat-value">2.169%</div>
+      <div class="stat-change up">+0.023 &middot; New high &middot; Six sessions rising</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- MARKET SNAPSHOT -->
+<div class="section">
+  <div class="section-label">Market Snapshot</div>
+  <h2>Market Snapshot</h2>
+  <p style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:16px;">Open Range Capital Research &middot; Marcus Drauschke &middot; March 6, 2026</p>
+
+  <table class="market-table">
+    <thead><tr><th>Instrument</th><th>Level</th><th>Change</th><th>Note</th></tr></thead>
+    <tbody>
+
+      <tr><td colspan="4" class="category">US Equity &middot; Thursday March 5 Close</td></tr>
+      <tr><td>Dow Jones</td><td>47,954.74</td><td class="down">-784.67 &middot; -1.61%</td><td><span class="tag-note">Down 1,100pts when WTI crossed $80; partial recovery</span></td></tr>
+      <tr><td>S&amp;P 500</td><td>6,830.71</td><td class="down">-38.79 &middot; -0.56%</td><td><span class="tag-note">Tech resilience capped the damage</span></td></tr>
+      <tr><td>Nasdaq</td><td>22,748.99</td><td class="down">-58.50 &middot; -0.26%</td><td><span class="tag-note">Broadcom +4.8% on AI beat; NVDA and AMD -2.6%, -3.3%</span></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,585.57</td><td class="down">-50.44 &middot; -1.91%</td><td><span class="tag-note">Rate and growth sensitive; worst performer Thursday</span></td></tr>
+      <tr><td>S&amp;P 500 VIX</td><td>23.75</td><td class="up">+2.60 &middot; +12.29%</td><td><span class="tag-note">Intraday high 25.84; highest since November</span></td></tr>
+      <tr><td>DAX</td><td>23,815.75</td><td class="down">-389.61 &middot; -1.61%</td><td></td></tr>
+      <tr><td>S&amp;P/TSX</td><td>33,609.97</td><td class="down">-332.89 &middot; -0.98%</td><td></td></tr>
+      <tr><td>Bovespa</td><td>180,464</td><td class="down">-4,903 &middot; -2.65%</td><td></td></tr>
+      <tr><td>MSCI World</td><td>4,460.99</td><td class="up">+2.83 &middot; +0.06%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Futures &middot; Live ~01:53 ET</td></tr>
+      <tr><td>US 30 (Dow)</td><td>48,036.7</td><td class="up">+82.5 &middot; +0.17%</td><td></td></tr>
+      <tr><td>US 500 (S&amp;P)</td><td>6,837.3</td><td class="up">+6.7 &middot; +0.10%</td><td><span class="tag-note">Tepid; pre-NFP caution; Europe leading the green</span></td></tr>
+      <tr><td>US Tech 100 (NQ)</td><td>25,072.9</td><td class="up">+52.5 &middot; +0.21%</td><td></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,599.6</td><td class="up">+14.0 &middot; +0.54%</td><td></td></tr>
+      <tr><td>VIX Futures</td><td>22.78</td><td class="down">-0.19 &middot; -0.84%</td><td><span class="tag-note">Fear easing at the margin overnight</span></td></tr>
+      <tr><td>DAX</td><td>23,985.5</td><td class="up">+203.5 &middot; +0.86%</td><td><span class="tag-note">Europe leading; stronger overnight recovery bid</span></td></tr>
+      <tr><td>CAC 40</td><td>8,101.3</td><td class="up">+55.8 &middot; +0.69%</td><td></td></tr>
+      <tr><td>FTSE 100</td><td>10,437.1</td><td class="down">-0.9 &middot; -0.01%</td><td></td></tr>
+      <tr><td>Euro Stoxx 50</td><td>5,827</td><td class="up">+56 &middot; +0.97%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Commodities &middot; Live ~01:53 ET</td></tr>
+      <tr><td>Gold (Apr 26)</td><td>$5,125.76</td><td class="up">+$47.06 &middot; +0.93%</td><td><span class="tag-note">Resuming recovery; structural bid intact post-ATH</span></td></tr>
+      <tr><td>Silver (May 26)</td><td>$84.670</td><td class="up">+$2.489 &middot; +3.03%</td><td><span class="tag-note">Recovering sharply; precious metals both bid</span></td></tr>
+      <tr><td>WTI Crude (Apr 26)</td><td>$80.52</td><td class="up">+$1.67 &middot; +2.24%</td><td><span class="tag-note">$80 threshold confirmed; tanker attack embedded in price</span></td></tr>
+      <tr><td>Brent (May 26)</td><td>$85.12</td><td class="up">+$1.54 &middot; +1.90%</td><td><span class="tag-note">$85 Brent; 20-week high; Barclays $80 scenario exceeded</span></td></tr>
+      <tr><td>Heating Oil (Apr 26)</td><td>$3.4432</td><td class="down">-$0.0072 &middot; -0.21%</td><td><span class="tag-note">Marginal pullback after four consecutive session rises</span></td></tr>
+      <tr><td>Gasoline RBOB (Apr 26)</td><td>$2.6420</td><td class="down">-$0.0289 &middot; -1.08%</td><td><span class="tag-note">Slight relief overnight; pump price path still upward</span></td></tr>
+      <tr><td>Natural Gas (Apr 26)</td><td>$2.975</td><td class="down">-$0.021 &middot; -0.70%</td><td></td></tr>
+      <tr><td>Copper (May 26)</td><td>$5.8535</td><td class="up">+$0.0265 &middot; +0.45%</td><td><span class="tag-note">Small recovery; growth read stabilising at margin</span></td></tr>
+      <tr><td>US Soybeans (May 26)</td><td>$1,185.25</td><td class="up">+$6.25 &middot; +0.53%</td><td></td></tr>
+      <tr><td>US Wheat (May 26)</td><td>$586.60</td><td class="up">+$1.35 &middot; +0.23%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Bond Yields &middot; Live ~01:51 ET</td></tr>
+      <tr><td>US 10Y</td><td>4.143%</td><td class="down">-0.005 &middot; -0.12%</td><td><span class="tag-note">First overnight 10Y pullback of the crisis; pre-NFP positioning</span></td></tr>
+      <tr><td>US 30Y</td><td>4.760%</td><td class="up">+0.007 &middot; +0.15%</td><td><span class="tag-note">Long end still drifting higher; inflation premium sticky</span></td></tr>
+      <tr><td>US 2Y</td><td>3.581%</td><td class="down">-0.018 &middot; -0.50%</td><td><span class="tag-note">Short end catching a bid; first meaningful 2Y pullback this week</span></td></tr>
+      <tr><td>Japan 10Y</td><td>2.169%</td><td class="up">+0.023 &middot; +1.07%</td><td><span class="tag-note">New crisis high; six consecutive sessions of yield rise</span></td></tr>
+      <tr><td>Japan 30Y</td><td>3.395%</td><td class="up">+0.013 &middot; +0.38%</td><td></td></tr>
+      <tr><td>Japan 40Y</td><td>3.610%</td><td class="up">+0.023 &middot; +0.64%</td><td><span class="tag-note">40Y new crisis high; BoJ intervention pressure intensifying</span></td></tr>
+      <tr><td>Euro Bund</td><td>127.18</td><td class="neutral">0.00 &middot; 0.00%</td><td></td></tr>
+      <tr><td>UK Gilt</td><td>91.37</td><td class="down">-0.95 &middot; -1.03%</td><td><span class="tag-note">Fifth consecutive session of decline; cumulative -5.3% on week</span></td></tr>
+
+      <tr><td colspan="4" class="category">FX &middot; Live ~01:53 ET</td></tr>
+      <tr><td>EUR/USD</td><td>1.1610</td><td class="up">+0.0003 &middot; +0.03%</td><td><span class="tag-note">Dollar fractionally softer overnight</span></td></tr>
+      <tr><td>USD/JPY</td><td>157.74</td><td class="up">+0.21 &middot; +0.13%</td><td><span class="tag-note">Yen weakening; BoJ intervention watch zone</span></td></tr>
+      <tr><td>GBP/USD</td><td>1.3368</td><td class="up">+0.0013 &middot; +0.10%</td><td></td></tr>
+      <tr><td>AUD/USD</td><td>0.7040</td><td class="up">+0.0032 &middot; +0.46%</td><td><span class="tag-note">Mild recovery; risk appetite returning at the margin</span></td></tr>
+
+      <tr><td colspan="4" class="category">Crypto &middot; Live ~01:53 ET</td></tr>
+      <tr><td>Bitcoin</td><td>$70,638.7</td><td class="down">-$1,920.5 &middot; -2.65%</td><td><span class="tag-note">Giving back Wednesday's gains; risk-off return Thursday</span></td></tr>
+      <tr><td>Ethereum</td><td>$2,073.53</td><td class="down">-$54.77 &middot; -2.57%</td><td></td></tr>
+      <tr><td>Solana</td><td>$88.110</td><td class="down">-$2.756 &middot; -3.03%</td><td></td></tr>
+      <tr><td>XRP</td><td>$1.4007</td><td class="down">-$0.0238 &middot; -1.67%</td><td></td></tr>
+
+    </tbody>
+  </table>
+  <p class="data-note">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements &middot; March 6, 2026</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- THREE THESES -->
+<div class="section">
+  <div class="section-label">Investment Theses &middot; Three Frameworks for the Week's Close</div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis I &middot; The Bond Curve Sends Its Clearest Signal Yet</div>
+    <div class="thesis-title">US 2Y -0.018 Overnight While 30Y +0.007. The Curve Is Steepening. That Is the Bond Market Pricing a Fed Cut It Does Not Want to Make.</div>
+    <p>The first meaningful overnight pullback in the US 2Y yield, down 1.8 basis points to 3.581%, while the 30Y continues drifting higher to 4.760%, is the most nuanced bond market signal of the week. A steepening yield curve, short end rallying while long end sells, typically reflects a market beginning to price a central bank that will be forced to ease despite inflation concerns. The 2Y pulling back could mean: NFP is expected weak enough that the market is pricing a forced Fed pivot; or; some positioning cleanup ahead of the data. It does not mean the inflation trade is over. The 30Y still rising confirms inflation expectations are sticky at the long end. What is changing is the market's assessment of how much political and economic pressure will eventually force the Fed's hand despite those inflation expectations.</p>
+    <p style="margin-bottom:0;">The CME FedWatch data is the cleanest expression of this: less than 3% probability of a March cut, one-in-three chance of any cut by June, and the base case now pushed to September. That September base case with the 2Y at 3.581% and the 30Y at 4.760% implies a 118-basis-point spread that is historically consistent with late-cycle environments where the central bank is behind the curve on easing into a slowdown. The Fed meets March 17-18. Powell's press conference language on the energy-inflation vs. growth-slowdown balance will be the single most market-moving event of the next two weeks, whatever the NFP says this morning.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis II &middot; Broadcom and the Separated AI Thesis</div>
+    <div class="thesis-title">AVGO +4.8% on AI Revenue +74% YoY. The AI Capex Cycle Is Intact. The Gulf Geography Is Not. These Are Two Different Investment Risks.</div>
+    <p>Broadcom's Thursday earnings result is analytically important for a specific reason: it establishes that hyperscaler AI capital expenditure is continuing at full pace despite the geopolitical backdrop. CEO Hock Tan's 74% year-over-year AI chip revenue growth is not a backward-looking number in the context of this week; it is a forward signal that Microsoft, Google, Amazon, and Meta have not cut their AI infrastructure commitments. That is the demand-side of the AI hardware thesis confirmed into the worst geopolitical week of 2026.</p>
+    <p style="margin-bottom:0;">The separated risk is geographic. Three of those five hyperscalers have committed significant infrastructure to the Gulf: AWS in the UAE (already hit in the conflict), Microsoft Azure in Qatar and UAE, Google in Saudi Arabia. The demand for AI compute is unambiguously intact. The question is whether Gulf-based sovereign AI projects from G42, ADQ, Aramco, and NEOM are accelerating or pausing in the current environment, and whether any hyperscaler issues guidance commentary about Gulf infrastructure risk in upcoming earnings calls. Broadcom's strong print does not resolve this question; it sharpens it. The AI infrastructure investment cycle is intact and the geography of that infrastructure is now in an active conflict zone. Those two facts will be reconciled over the next 60-90 days of earnings guidance cycles.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis III &middot; Russia's Quiet Win and the Sanctions Architecture Cracking</div>
+    <div class="thesis-title">US Treasury Granted India a 30-Day Russian Oil Waiver Thursday. The Iran War Is Inadvertently Relieving Pressure on the Russia Sanctions Regime.</div>
+    <p>The US Treasury's 30-day waiver for India's purchase of Russian oil is one of the most significant policy developments of the week and has received almost no equity market attention. The logic is straightforward: India, which imports a substantial share of its oil through Gulf channels, faces an acute supply problem if Hormuz is effectively closed. Russia is the most immediately available alternative supplier with established logistics to Indian refineries. Sanctioning Indian purchases of Russian oil while simultaneously fighting a war that has closed the primary alternative supply corridor is not operationally sustainable. The waiver is the Treasury acknowledging this.</p>
+    <p style="margin-bottom:0;">The second-order effect is the Kpler-identified China dimension. China, which had been moderating its Russian crude intake under diplomatic pressure, now has explicit cover to increase purchases: the supply disruption from Hormuz gives Beijing an economic justification that is indistinguishable from the geopolitical opportunism that Western policymakers would prefer to constrain. The Iran war is inadvertently providing Russia with increased energy revenue at a moment when the sanctions architecture was beginning to materially constrain Kremlin financing. This is the kind of strategic second-order consequence that does not appear in the first week of any major conflict and tends to become visible only after the fact. It is now visible. The Russia-China-India crude triangle is being reconstructed in real time, and the US has just blessed the first transaction.</p>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- CALENDAR -->
+<div class="section">
+  <div class="section-label">Calendar &middot; Friday, March 6, 2026 &middot; NFP Day</div>
+  <div class="cal-row">
+    <div class="cal-time">08:30 ET</div>
+    <div class="cal-event">Non-Farm Payrolls &middot; February &middot; Consensus 58k-65k &middot; Unemployment 4.4% &middot; AHE +0.4% MoM <span class="cal-flag red">Week's Most Critical</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">Iran diplomatic posture &middot; Any ceasefire signal or escalation after tanker attack <span class="cal-flag red">Priority</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">White House energy policy response &middot; SPR release or market intervention announcement <span class="cal-flag gold">Watch</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">Hormuz tanker traffic &middot; Any Navy escort operational confirmation <span class="cal-flag red">Priority</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">Week Ahead</div>
+    <div class="cal-event">March 17-18 FOMC &middot; Powell press conference &middot; Dot plot &middot; Most consequential near-term macro event <span class="cal-flag red">Horizon</span></div>
+  </div>
+</div>
+
+<div class="pullquote">
+  "What we're all trying to figure out is, is this a short war? Meaning less than a month, or is it sort of medium term, which is a bigger problem, or does it last for a long time, in which case I'm talking oil above $100, at which point you're probably gonna end up with a global recession."
+  <div class="pullquote-attr">Dan Niles, Niles Investment Management &middot; CNBC Power Lunch &middot; March 5, 2026</div>
+</div>
+
+<div class="footer">
+  <p>Open Range Capital Research &middot; Morning Brief &middot; Friday, March 6, 2026</p>
+  <p>SaaS disruption analysis: <a href="https://substack.com/home/post/p-188803679" class="accent-link">Part I: The Structural Revaluation in Application Software</a> &middot; <a href="https://substack.com/home/post/p-188806163" class="accent-link">Part II: Blue Owl and the Credit Market Dimension</a></p>
+  <p style="margin-top:10px;">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements. This document is for institutional research purposes. Not investment advice.</p>
+</div>
+
+</body>
+</html>
