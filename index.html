@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Range Capital Research - Morning Brief March 11, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e0e;
+    --paper: #f5f0e8;
+    --cream: #ede8dc;
+    --accent: #c8392b;
+    --gold: #b8860b;
+    --muted: #6b6258;
+    --rule: #c9bfaf;
+    --green: #1a6644;
+    --red: #c8392b;
+    --blue: #1a3a5c;
+    --oil: #7a3b00;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Libre Baskerville', Georgia, serif; font-size: 16px; line-height: 1.7; max-width: 780px; margin: 0 auto; padding: 0 24px 80px; }
+  .masthead { border-bottom: 3px solid var(--ink); padding: 36px 0 20px; text-align: center; }
+  .masthead-top { display: flex; justify-content: space-between; align-items: baseline; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .publication-name { font-family: 'DM Serif Display', serif; font-size: 42px; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+  .publication-sub { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .headline-strip { background: var(--ink); color: var(--paper); padding: 14px 20px; margin: 0 -24px; display: flex; gap: 32px; align-items: center; overflow: hidden; }
+  .strip-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+  .strip-text { font-family: 'DM Mono', monospace; font-size: 12px; color: #e8e0d0; white-space: nowrap; animation: scroll-text 90s linear infinite; }
+  @keyframes scroll-text { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .section { margin-top: 40px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px; margin-bottom: 18px; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
+  h2 { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+  .deck { font-size: 18px; line-height: 1.55; color: #2a2520; margin-bottom: 20px; font-style: italic; }
+  .byline { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 32px; }
+  p { margin-bottom: 14px; }
+  hr.section-rule { border: none; border-top: 1px solid var(--rule); margin: 32px 0; }
+  .alert-box { border: 2px solid var(--accent); background: var(--cream); padding: 18px 20px; margin-bottom: 24px; }
+  .alert-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .alert-items { list-style: none; padding: 0; }
+  .alert-items li { font-family: 'DM Mono', monospace; font-size: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
+  .alert-items li:last-child { border-bottom: none; }
+  .alert-dot { display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-right: 10px; vertical-align: middle; }
+  .cpi-banner { background: var(--blue); color: #f0f4f8; padding: 20px 24px; margin: 0 -24px 0; text-align: center; }
+  .cpi-banner-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; color: #9ab3cc; }
+  .cpi-banner-value { font-family: 'DM Serif Display', serif; font-size: 52px; line-height: 1; margin-bottom: 6px; }
+  .cpi-banner-sub { font-family: 'DM Mono', monospace; font-size: 13px; color: #9ab3cc; }
+  .market-table { width: 100%; border-collapse: collapse; font-family: 'DM Mono', monospace; font-size: 13px; margin-top: 4px; }
+  .market-table th { text-align: left; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 6px 8px; border-bottom: 2px solid var(--ink); }
+  .market-table td { padding: 8px 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .market-table tr:last-child td { border-bottom: none; }
+  .market-table .category { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-top: 14px; padding-bottom: 2px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .tag-note { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+  .thesis-box { border-left: 3px solid var(--accent); padding: 16px 20px; background: var(--cream); margin-bottom: 16px; }
+  .thesis-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .thesis-title { font-family: 'DM Serif Display', serif; font-size: 17px; margin-bottom: 8px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 4px; }
+  .stat-box { background: var(--cream); border: 1px solid var(--rule); padding: 12px 14px; }
+  .stat-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .stat-value { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1.1; margin-bottom: 2px; }
+  .stat-change { font-family: 'DM Mono', monospace; font-size: 11px; }
+  .stat-box.danger { border-color: var(--accent); background: #f8eae8; }
+  .stat-box.gold-box { border-color: var(--gold); background: #fdf8ec; }
+  .stat-box.blue-box { border-color: var(--blue); background: #eef2f7; }
+  .cal-row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+  .cal-row:last-child { border-bottom: none; }
+  .cal-time { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); min-width: 110px; padding-top: 2px; }
+  .cal-event { flex: 1; }
+  .cal-flag { font-family: 'DM Mono', monospace; font-size: 10px; background: var(--ink); color: var(--paper); padding: 2px 6px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+  .cal-flag.red { background: var(--accent); }
+  .cal-flag.gold { background: var(--gold); }
+  .pullquote { border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 20px 0; margin: 32px 0; font-family: 'DM Serif Display', serif; font-size: 22px; font-style: italic; line-height: 1.35; color: var(--blue); }
+  .pullquote-attr { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+  .signal-box { border: 2px solid var(--ink); background: var(--cream); padding: 20px 22px; margin: 24px 0; }
+  .signal-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); margin-bottom: 10px; }
+  .cpi-scenario { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 14px 0; border: 1px solid var(--rule); }
+  .cpi-cell { padding: 16px 18px; }
+  .cpi-cell:first-child { border-right: 1px solid var(--rule); }
+  .cpi-cell-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; }
+  .cpi-cell-value { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.1; margin-bottom: 6px; }
+  .cpi-cell-note { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); line-height: 1.5; }
+  .footer { border-top: 3px solid var(--ink); margin-top: 60px; padding-top: 20px; font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; line-height: 1.8; }
+  .accent-link { color: var(--accent); text-decoration: none; }
+  .data-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 10px; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Open Range Capital Research</span>
+    <span>Wednesday, March 11, 2026</span>
+    <span>Morning Brief</span>
+  </div>
+  <div class="publication-name">Morning Brief</div>
+  <div class="publication-sub">Markets &middot; Macro &middot; Investment Research</div>
+</div>
+
+<div class="headline-strip">
+  <span class="strip-label">Day 11</span>
+  <span class="strip-text">CPI Feb due 08:30 ET &middot; Consensus: +2.5% YoY, +0.3% core &middot; WTI $83.77 down further &middot; US 10Y 4.147% RISING despite oil fall &middot; DAX +2.39% leads Europe &middot; Japan 40Y 3.676% new crisis high +0.91% &middot; Gold $5,205 holds $5,200 &middot; UK Gilt second green session &middot; S&P flat &middot; DAX futures -0.27% fading from cash rally &middot; CPI Feb due 08:30 ET &middot; Backward-looking number &middot; March CPI in April is the real one &middot; US 10Y rising as oil falls = stagflation premium not oil premium</span>
+</div>
+
+<!-- CPI BANNER -->
+<div class="cpi-banner">
+  <div class="cpi-banner-label">CPI February 2026 &middot; BLS Release &middot; 08:30 ET Today &middot; Day 11</div>
+  <div class="cpi-banner-value">2.5%</div>
+  <div class="cpi-banner-sub">Consensus YoY headline &middot; Core: +0.3% MoM / +2.5% YoY &middot; Data collected before Feb 28 Iran strikes &middot; Oil shock absent from this number</div>
+</div>
+
+<!-- ALERT -->
+<div class="section">
+  <div class="section-label">Situation Update &middot; Wednesday March 11, 2026 &middot; Day 11 of US-Iran War</div>
+  <div class="alert-box">
+    <div class="alert-label">Tuesday Developments &middot; The Yield Curve Is Not Buying the Oil Retreat</div>
+    <ul class="alert-items">
+      <li><span class="alert-dot"></span>WTI fell further to $83.77 overnight, continuing the retreat from the $119.43 intraday high on Day 10. Brent at $87.70. Oil is now down roughly 30% from the peak in 11 days since the conflict began.</li>
+      <li><span class="alert-dot"></span>US 10Y yield at 4.147%, up 1.2bp. US 30Y up 1.4bp. US 2Y up 1.1bp. The entire US yield curve is rising on a day when oil is falling. This is the stagflation premium asserting itself independently of the current oil price level.</li>
+      <li><span class="alert-dot"></span>Japan 40Y yield at 3.676%, up 0.91%, a new crisis high. The long end of the JGB curve is breaking out while Japan 10Y fell slightly. A steepening JGB curve at these levels is the market telling the BoJ that the long-run inflation problem has arrived regardless of short-term intervention capacity.</li>
+      <li><span class="alert-dot"></span>DAX closed +2.39% at 23,968, the largest single-session European equity gain since the conflict began. Europe is pricing the oil relief more aggressively than US markets. DAX futures are -0.27% overnight, suggesting the enthusiasm is already fading.</li>
+      <li><span class="alert-dot"></span>UK Gilt posted a second consecutive positive session, up 0.79% to 91.29. The cumulative seven-session decline from pre-crisis levels was approximately 7.4%. Two sessions of recovery have clawed back roughly 1.7% of that. The Gilt is stabilizing, not recovering.</li>
+      <li><span class="alert-dot"></span>US Embassy evacuation of non-essential staff from Saudi Arabia proceeded. Iran's stated position remains: no negotiations while attacks continue. The operational picture on the ground has not changed.</li>
+      <li><span class="alert-dot"></span>Iraq production cut confirmed at 70% from pre-conflict 4.3 million bpd. Saudi Aramco field shut-ins continuing. Gulf refinery force majeures at Ras Tanura, Bapco, and Ras Laffan remain in effect. These are the structural supply impairments that persist regardless of WTI's daily print.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- LEDE -->
+<div class="section">
+  <div class="section-label">Analysis</div>
+  <h1>Oil Is at $83. Yields Are Still Rising. The Bond Market Is Telling You What the Oil Market Decline Is Not.</h1>
+
+  <p class="deck">WTI has fallen from $119.43 to $83.77 in two sessions, a 30% collapse from the conflict high. In a normal cycle, a 30% oil decline would produce a powerful bond rally as inflation expectations repriced lower. US 10Y yields are rising. US 2Y yields are rising. US 30Y yields are rising. The entire yield curve is moving in the wrong direction for the relief narrative. This is the single most important signal in this morning's data, and it arrives six hours before the February CPI print that the entire market is treating as the week's defining data point. The bond market already knows what February CPI will say. It has decided that February is irrelevant.</p>
+
+  <p class="byline">Open Range Capital Research &middot; Marcus Drauschke &middot; March 11, 2026</p>
+
+  <p>The diagnostic logic of the current bond market behavior requires careful accounting. When oil falls sharply, inflation expectations normally fall with it, yields decline, and the bond market rallies. This is the standard transmission mechanism of energy prices into fixed income. It is not happening. WTI fell from $107 to $89 on Day 10 and yields fell modestly. WTI fell further to $83.77 overnight and yields are rising. The standard transmission mechanism has broken. What the bond market is pricing in its place is the inflation path that the Iran conflict has already locked in regardless of where oil settles today. Iraq has cut 70% of its production. Saudi Aramco has shut in fields. Ras Tanura, Bapco, and Ras Laffan are producing nothing. These structural supply impairments take weeks to months to reverse even after a ceasefire. The oil price can fall because Trump said the war is "very complete, pretty much." The physical supply of refined energy products that those facilities produce cannot recover because of a statement to CBS News. The bond market knows the difference. Yields are rising because the inflation path for March, April, and May is not determined by where WTI trades on March 11. It is determined by whether Gulf refining capacity comes back online and when.</p>
+
+  <p>The Japan 40Y yield at 3.676% is the second structural signal in this morning's data. Japan's 10Y yield fell slightly to 2.162%, which looks like relief. The 40Y rising to a new crisis high simultaneously is the opposite of relief. A steepening long end in Japan at these levels is the bond market pricing a sustained inflationary environment that the Bank of Japan cannot address without inflicting severe pain on the domestic economy. Japan imports 100% of its oil. A sustained period of oil above $80 adds directly to import costs, weakens the yen, and adds to domestic inflation. The BoJ's response options are: raise rates to defend the yen and the long end, which crushes growth; or maintain current policy and watch the curve steepen and the yen weaken further. The 40Y at 3.676% is the market assigning meaningful probability to the second outcome persisting. USD/JPY at 157.99 is creeping back toward the 158-160 intervention threshold that the BoJ has historically defended. The 40Y and USD/JPY are pricing the same scenario from different angles.</p>
+
+  <p>The DAX's +2.39% Tuesday session is the most aggressive single-day European equity rally since the conflict began, and it is already partially reversing in futures at -0.27%. The explanation for both the rally and the overnight fade is the same: European equity is pricing oil. DAX composition is heavy in energy-intensive industrials, auto manufacturers, and chemical companies. When oil falls from $107 to $83, the margin relief for those sectors is real and immediate. The equity market captured it in a single session. The overnight futures fade reflects the recognition that the margin relief stops there. Heating Oil is +0.35% this morning. Natural Gas is -0.13% but remains well above pre-conflict levels. Refined products and LNG, which European industry actually buys, are not following crude lower at the same rate. German pump prices are approaching the pre-conflict all-time record. The ADAC national average was already above €1.90 at the beginning of last week. The relationship between WTI's spot price and what European households pay at the forecourt runs through the refinery capacity that is currently offline.</p>
+
+  <p>February CPI at 08:30 ET today is the week's most anticipated scheduled data point and simultaneously the data point with the most limited forward information content. The consensus is +0.3% month-on-month and +2.4% to +2.5% year-on-year on headline, with core at +0.3% month-on-month and +2.5% year-on-year. January CPI came in at +2.4% YoY and +2.5% core, the lowest core reading since April 2021, driven by declining used car prices, falling gasoline, and cooling shelter. February data was collected entirely before February 28. The gasoline component of February CPI will show the pre-conflict price, which had been declining. The shelter component will reflect the January and early February rental and OER trend, which was already cooling. The number is, by construction, incapable of telling the market anything meaningful about the inflation path that begins with oil at $83 sustained by refinery force majeures and structural Gulf production shut-ins. Every analyst covering this release has said as much. The market knows. The bond market has already said it does not care. The equity market will trade the number anyway, because it is the only scheduled catalyst available before the FOMC next week.</p>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- CPI SCENARIO BOX -->
+<div class="signal-box">
+  <div class="signal-label">CPI February &middot; Scenario Matrix &middot; 08:30 ET Release</div>
+  <h2 style="margin-bottom:12px;">The Number Cannot Tell You What Matters. It Can Still Move Markets.</h2>
+  <div class="cpi-scenario">
+    <div class="cpi-cell">
+      <div class="cpi-cell-label" style="color:var(--accent);">Hot Print &middot; Above 2.5% YoY or above 0.3% core MoM</div>
+      <div class="cpi-cell-value down">Bond Sell-off</div>
+      <div class="cpi-cell-note">Short end reprices cuts further out. 10Y pushes toward 4.20% resistance. Equity sells off. Relief trade fully reversed. Dollar strengthens. This scenario has the sharpest and most durable market impact of the two.</div>
+    </div>
+    <div class="cpi-cell">
+      <div class="cpi-cell-label" style="color:var(--green);">Cool Print &middot; Inline or below at 2.4% or softer core</div>
+      <div class="cpi-cell-value up">Brief Relief</div>
+      <div class="cpi-cell-note">Bonds rally, equities extend, dollar softens. Half-life measured in hours. Market participants already know March CPI captures $100+ oil average. The cooling in February is moot from a policy perspective.</div>
+    </div>
+  </div>
+  <p style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin:0;">The reaction function is asymmetric regardless of where oil trades. Hot print = durable pain. Cool print = temporary relief. February's data is pre-conflict. The oil shock enters CPI in March, arriving in mid-April. The FOMC meets next week and must respond to both NFP -92k and whatever CPI shows today, using a policy rate that addresses neither mandate cleanly.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- YIELD SIGNAL SECTION -->
+<div class="section">
+  <div class="section-label">The Signal That Matters Most This Morning</div>
+  <h2>WTI -6.5% Since Monday's Close. US 10Y +1.2bp. This Is the Yield Curve Pricing Something Other Than Oil.</h2>
+
+  <div class="two-col" style="margin-bottom:20px;">
+    <div class="stat-box danger">
+      <div class="stat-label">US 10Y &middot; Rising on Falling Oil</div>
+      <div class="stat-value">4.147%</div>
+      <div class="stat-change up">+0.012 &middot; +0.29% &middot; Pre-crisis was sub-4%</div>
+    </div>
+    <div class="stat-box danger">
+      <div class="stat-label">Japan 40Y &middot; New Crisis High</div>
+      <div class="stat-value">3.676%</div>
+      <div class="stat-change up">+0.033 &middot; +0.91% &middot; Long-end breaking out</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">WTI Crude &middot; Oil Relief</div>
+      <div class="stat-value">$83.77</div>
+      <div class="stat-change down">+0.32 &middot; +0.38% &middot; Down 30% from $119.43 peak</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">DAX &middot; Oil Relief Priced In</div>
+      <div class="stat-value">23,968</div>
+      <div class="stat-change up">+559 &middot; +2.39% &middot; Futures -0.27% overnight</div>
+    </div>
+  </div>
+
+  <p>The divergence between WTI and the US yield curve is the structural signal of the week. Energy economists at ClearBridge noted this week that February's CPI data is "from before the recent conflict" and that the oil shock effect is "going to be a March and April dynamic." The bond market has already assigned that forward path. It is not waiting for the data. The 10Y at 4.147% on a day when oil is at $83 and equity markets are broadly flat reflects a yield curve that has internalized the structural inflation problem independently of the daily crude print. The relief at the oil level is genuine. The transmission of that relief into bond prices is broken because the supply-side damage is not located in the barrel price. It is located in refinery availability, Gulf production capacity, and the fertilizer and LNG supply chain disruptions that propagate into food and heating prices over a three to six month lag. None of those transmission channels are addressed by WTI trading at $83.</p>
+
+  <p style="margin-bottom:0;">The practical implication for portfolio positioning is direct: the oil relief trade in equities has a ceiling set by the yield curve's refusal to confirm it. An equity rally that is not supported by falling yields and a recovering bond market is not a durable rally. It is a single-variable repricing of the oil input cost. Once that repricing is complete, the second variable reasserts: the cost of capital is not falling, private credit is gating, and NFP already came in at -92,000 in a world where oil averaged $65-70. The full cost-of-capital and growth impact of the Iran shock has not yet appeared in any scheduled data release. It will first appear in March PMI, April NFP, and April CPI. These are the numbers that will actually matter. Today's CPI is the last backward-looking print before the FOMC must act.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- KEY NUMBERS -->
+<div class="section">
+  <div class="section-label">Key Numbers &middot; Wednesday Pre-market</div>
+  <div class="two-col">
+    <div class="stat-box gold-box">
+      <div class="stat-label">Gold &middot; Holding $5,200</div>
+      <div class="stat-value">$5,205</div>
+      <div class="stat-change down">-$36.85 &middot; -0.70% &middot; Still above $5,200 &middot; Geopolitical premium intact</div>
+    </div>
+    <div class="stat-box blue-box">
+      <div class="stat-label">UK Gilt &middot; Second Green Session</div>
+      <div class="stat-value">91.29</div>
+      <div class="stat-change up">+0.72 &middot; +0.79% &middot; Cumulative two-day recovery +1.7% from lows</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Bitcoin &middot; Holding Near $70k</div>
+      <div class="stat-value">$69,919</div>
+      <div class="stat-change down">-$473.7 &middot; -0.67% &middot; Minor pullback &middot; Still +10.6% from pre-conflict</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">VIX &middot; Second Session Declining</div>
+      <div class="stat-value">24.93</div>
+      <div class="stat-change down">-0.57 &middot; -2.24% &middot; Down from 35.30 intraday peak Monday</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Heating Oil &middot; Not Following Crude</div>
+      <div class="stat-value">$3.4102</div>
+      <div class="stat-change up">+0.0119 &middot; +0.35% &middot; Refinery damage persists</div>
+    </div>
+    <div class="stat-box danger">
+      <div class="stat-label">Japan 40Y &middot; New Crisis High</div>
+      <div class="stat-value">3.676%</div>
+      <div class="stat-change up">+0.033 &middot; +0.91% &middot; Long-end JGB breaking out</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- MARKET SNAPSHOT TABLE -->
+<div class="section">
+  <div class="section-label">Market Snapshot</div>
+  <h2>Market Snapshot</h2>
+  <p style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:16px;">Open Range Capital Research &middot; Marcus Drauschke &middot; March 11, 2026</p>
+
+  <table class="market-table">
+    <thead><tr><th>Instrument</th><th>Level</th><th>Change</th><th>Note</th></tr></thead>
+    <tbody>
+
+      <tr><td colspan="4" class="category">US Equity &middot; Tuesday March 10 Close</td></tr>
+      <tr><td>Dow Jones</td><td>47,706.51</td><td class="down">-34.29 &middot; -0.07%</td><td><span class="tag-note">Essentially flat &middot; Session range 47,444 to 48,220 still wide</span></td></tr>
+      <tr><td>S&amp;P 500</td><td>6,781.48</td><td class="down">-14.51 &middot; -0.21%</td><td><span class="tag-note">US did not follow European equity strength &middot; Yield divergence is the explanation</span></td></tr>
+      <tr><td>Nasdaq</td><td>22,697.10</td><td class="up">+1.16 &middot; +0.01%</td><td><span class="tag-note">Flat &middot; Tech still absorbing rate-cut premium exit</span></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,548.08</td><td class="down">-5.59 &middot; -0.22%</td><td><span class="tag-note">Rate-sensitive; holding up despite rising yields</span></td></tr>
+      <tr><td>S&amp;P 500 VIX</td><td>24.93</td><td class="down">-0.57 &middot; -2.24%</td><td><span class="tag-note">Second session declining &middot; Down from 35.30 peak but still elevated vs pre-conflict 16-18</span></td></tr>
+      <tr><td>DAX</td><td>23,968.63</td><td class="up">+559.26 &middot; +2.39%</td><td><span class="tag-note">Largest European equity gain since conflict began &middot; Oil input cost repricing &middot; Futures -0.27% fading</span></td></tr>
+      <tr><td>S&amp;P/TSX</td><td>33,270.65</td><td class="up">+81.33 &middot; +0.25%</td><td></td></tr>
+      <tr><td>Bovespa</td><td>183,447</td><td class="up">+2,532 &middot; +1.40%</td><td></td></tr>
+      <tr><td>S&amp;P/BMV IPC</td><td>67,397.94</td><td class="up">+507.67 &middot; +0.76%</td><td></td></tr>
+      <tr><td>MSCI World</td><td>4,439.70</td><td class="up">+1.69 &middot; +0.04%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">US Futures &middot; Pre-market ~03:13 ET</td></tr>
+      <tr><td>US 30 (Dow)</td><td>47,842.6</td><td class="up">+136.1 &middot; +0.29%</td><td></td></tr>
+      <tr><td>US 500 (S&amp;P)</td><td>6,799.6</td><td class="up">+18.1 &middot; +0.27%</td><td><span class="tag-note">Light green pre-CPI &middot; Positioning cautious ahead of 08:30 release</span></td></tr>
+      <tr><td>US Tech 100</td><td>25,016.0</td><td class="up">+59.5 &middot; +0.24%</td><td></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,555.9</td><td class="up">+7.8 &middot; +0.31%</td><td></td></tr>
+      <tr><td>VIX Futures</td><td>24.57</td><td class="down">-0.53 &middot; -2.09%</td><td></td></tr>
+      <tr><td>DAX Futures</td><td>23,887.5</td><td class="down">-65.5 &middot; -0.27%</td><td><span class="tag-note">Yesterday's 2.39% cash rally already fading &middot; Refined products not following crude relief</span></td></tr>
+      <tr><td>CAC 40</td><td>8,030.0</td><td class="down">-35.0 &middot; -0.43%</td><td></td></tr>
+      <tr><td>FTSE 100</td><td>10,367.5</td><td class="up">+7.5 &middot; +0.07%</td><td></td></tr>
+      <tr><td>Euro Stoxx 50</td><td>5,812</td><td class="down">-22 &middot; -0.38%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Commodities &middot; Pre-market ~03:13 ET</td></tr>
+      <tr><td>Gold (Apr 26)</td><td>$5,205.25</td><td class="down">-$36.85 &middot; -0.70%</td><td><span class="tag-note">Minor pullback but holding above $5,200 &middot; Geopolitical premium structurally intact</span></td></tr>
+      <tr><td>Silver (May 26)</td><td>$87.555</td><td class="down">-$2.037 &middot; -2.27%</td><td><span class="tag-note">Growth-sensitive portion of precious metals complex giving back some of Tuesday's gain</span></td></tr>
+      <tr><td>WTI Crude (Apr 26)</td><td>$83.77</td><td class="up">+$0.32 &middot; +0.38%</td><td><span class="tag-note">Down 30% from $119.43 crisis peak &middot; Still up 21% from pre-conflict $69 level</span></td></tr>
+      <tr><td>Brent (May 26)</td><td>$87.70</td><td class="down">-$0.10 &middot; -0.11%</td><td><span class="tag-note">Still up 27% from pre-conflict $69 &middot; Structural supply impairments persist below the surface</span></td></tr>
+      <tr><td>Heating Oil (Apr 26)</td><td>$3.4102</td><td class="up">+$0.0119 &middot; +0.35%</td><td><span class="tag-note">Diverging from crude again &middot; Refinery damage not recoverable via verbal intervention or SPR</span></td></tr>
+      <tr><td>Natural Gas (Apr 26)</td><td>$3.053</td><td class="down">-$0.004 &middot; -0.13%</td><td><span class="tag-note">Slight pullback &middot; LNG force majeures at Ras Laffan still in effect</span></td></tr>
+      <tr><td>Gasoline RBOB (Apr 26)</td><td>$2.6575</td><td class="up">+$0.0172 &middot; +0.65%</td><td><span class="tag-note">Retail component recovering slightly &middot; German pump at ~€1.97-2.00/L and rising</span></td></tr>
+      <tr><td>Copper (May 26)</td><td>$5.8968</td><td class="down">-$0.0195 &middot; -0.33%</td><td><span class="tag-note">Industrial demand still pricing slowdown risk</span></td></tr>
+      <tr><td>US Wheat (May 26)</td><td>$594.90</td><td class="up">+$1.90 &middot; +0.32%</td><td><span class="tag-note">Fertilizer supply chain disruption persisting &middot; Planting season pressure building</span></td></tr>
+      <tr><td>US Soybeans (May 26)</td><td>$1,209.50</td><td class="up">+$6.25 &middot; +0.52%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Bond Yields &middot; Pre-market ~03:11 ET</td></tr>
+      <tr><td>US 10Y</td><td>4.147%</td><td class="up">+0.012 &middot; +0.29%</td><td><span class="tag-note">Rising despite falling oil &middot; Stagflation premium asserting independently of crude price</span></td></tr>
+      <tr><td>US 30Y</td><td>4.786%</td><td class="up">+0.014 &middot; +0.29%</td><td><span class="tag-note">Long end confirming: this is not a transient energy spike in the market's view</span></td></tr>
+      <tr><td>US 2Y</td><td>3.580%</td><td class="up">+0.011 &middot; +0.31%</td><td><span class="tag-note">Short end rising = cuts being priced out further &middot; Market not buying rate relief narrative</span></td></tr>
+      <tr><td>Japan 10Y</td><td>2.162%</td><td class="down">-0.015 &middot; -0.69%</td><td><span class="tag-note">10Y slight relief but does not reflect the long-end picture</span></td></tr>
+      <tr><td>Japan 30Y</td><td>3.442%</td><td class="up">+0.018 &middot; +0.53%</td><td><span class="tag-note">Long end still rising &middot; JGB curve steepening</span></td></tr>
+      <tr><td>Japan 40Y</td><td>3.676%</td><td class="up">+0.033 &middot; +0.91%</td><td><span class="tag-note">New crisis high &middot; Long-end breaking out &middot; BoJ cannot address this without crushing growth</span></td></tr>
+      <tr><td>UK Gilt</td><td>91.29</td><td class="up">+0.72 &middot; +0.79%</td><td><span class="tag-note">Second consecutive green session &middot; Stabilizing, not recovering &middot; Cumulative still -5.8% from pre-crisis</span></td></tr>
+      <tr><td>Euro Bund</td><td>127.02</td><td class="up">+0.06 &middot; +0.04%</td><td><span class="tag-note">Essentially flat &middot; European sovereign bonds not participating in equity relief</span></td></tr>
+
+      <tr><td colspan="4" class="category">Currencies &middot; Pre-market ~03:13 ET</td></tr>
+      <tr><td>EUR/USD</td><td>1.1628</td><td class="up">+0.0020 &middot; +0.17%</td><td><span class="tag-note">Euro holding near highs &middot; DAX rally supporting sentiment</span></td></tr>
+      <tr><td>USD/JPY</td><td>157.99</td><td class="down">-0.05 &middot; -0.03%</td><td><span class="tag-note">Approaching 158 &middot; BoJ intervention threshold at 158-160 &middot; Watch Japan 40Y for the pressure point</span></td></tr>
+      <tr><td>GBP/USD</td><td>1.3450</td><td class="up">+0.0032 &middot; +0.24%</td><td><span class="tag-note">Sterling recovering on Gilt stabilization &middot; Two green sessions for both</span></td></tr>
+      <tr><td>AUD/USD</td><td>0.7177</td><td class="up">+0.0057 &middot; +0.80%</td><td><span class="tag-note">Commodity currency &middot; Gold holding, iron ore resilient</span></td></tr>
+
+      <tr><td colspan="4" class="category">Crypto &middot; Pre-market ~03:14 ET</td></tr>
+      <tr><td>Bitcoin</td><td>$69,919.7</td><td class="down">-$473.7 &middot; -0.67%</td><td><span class="tag-note">Minor pullback &middot; Still holding near $70,000 &middot; +10.6% from pre-conflict level &middot; Geopolitical hedge thesis intact</span></td></tr>
+      <tr><td>Ethereum</td><td>$2,024.26</td><td class="down">-$25.87 &middot; -1.26%</td><td></td></tr>
+      <tr><td>Solana</td><td>$86.054</td><td class="down">-$0.627 &middot; -0.72%</td><td></td></tr>
+
+    </tbody>
+  </table>
+  <p class="data-note">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- THREE THESES -->
+<div class="section">
+  <div class="section-label">Three Theses &middot; What the Data Is Actually Saying</div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis I &middot; The Yield Signal</div>
+    <div class="thesis-title">Oil Fell 30% From the Peak. Yields Rose. When the Standard Transmission Mechanism Breaks, the Bond Market Is Pricing Something With a Longer Duration Than the Current Oil Price.</div>
+    <p>The relationship between energy prices and bond yields is one of the most reliable transmission channels in macroeconomics. When oil falls, inflation expectations fall, yields fall, bonds rally. The current data shows oil at $83 and all three US yield tenors rising. This breakdown is not noise. It is the bond market's declaration that the inflation problem in this cycle is not located in the barrel price of crude, but in the structural supply impairment that will persist for months regardless of where WTI trades on any given day. Iraq has cut 70% of production. Saudi Aramco has shut in fields. Three major Gulf refinery and LNG complexes are under force majeure. These are not factors that normalize when Trump says the war is "very complete." They normalize when operational conditions on the ground permit restart, which is a physical timeline measured in weeks to months, not in statements. The bond market has decided that the inflation path for March through at least June is already determined. It is pricing that path through rising yields even as oil retreats. This is the correct read.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis II &middot; Europe's Asymmetric Exposure</div>
+    <div class="thesis-title">DAX +2.39% Tuesday. DAX Futures -0.27% Wednesday. The Single-Variable Repricing Is Already Complete. What Remains Is the Structural Problem.</div>
+    <p>The DAX's 2.39% Tuesday session captured the full oil input cost relief trade for European industrials and auto manufacturers in a single session. The overnight fade in futures reflects the second-order reality: European energy exposure does not stop at crude oil. Germany imports 100% of its oil and the majority of its gas. German pump prices stood at approximately €1.97 per liter on March 9, approaching the March 2022 all-time record of €2.259. Individual stations in Bremen and other cities have already crossed €2.00. The EU average is €1.574. The DAX rally priced WTI at $83. It has not yet priced the refinery capacity that is offline, the LNG force majeures that constrain European gas supply, or the heating oil trajectory that is +0.35% today against crude's mild positive. The ECB is in the same policy trap as the Fed without the dollar's reserve currency buffer. European sovereign bonds, represented by the Bund at essentially flat, are not participating in the equity rally. That divergence between DAX equities and Bund fixed income is the same signal as the US yield curve rising against falling WTI. Both markets are telling you the problem has a longer tail than the relief trade implies.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis III &middot; CPI's Asymmetric Reaction Function</div>
+    <div class="thesis-title">Hot Print Lasts. Cool Print Is Moot. The Market Knows February Is Backward-Looking. The Bond Market Has Already Moved to March.</div>
+    <p>The February CPI consensus is +2.5% YoY headline and +0.3% core month-on-month. January CPI was +2.4% YoY with +2.5% core, the lowest core reading since April 2021. February was collected entirely before the Iran conflict. The energy component will show pre-conflict gasoline prices, which were falling. Shelter is expected to continue cooling. This is the last backward-looking inflation print the FOMC will see before its March 17-18 decision. The market's reaction function is asymmetric: a hot print produces durable bond selling because it adds pre-conflict stickiness to the Iran-shock trajectory, compounding the problem. A cool print produces brief equity relief but cannot be sustained because every participant knows March CPI, reported in mid-April, will show the full weight of $100+ oil average for an entire month. The FOMC must make a rate decision next week against a -92,000 NFP, a yield curve that refuses to rally on oil relief, and a CPI print that cannot tell them what they actually need to know about the March inflation path. There is no good option in the dot plot. Whatever Powell says on March 18 is the most consequential central bank communication since Jackson Hole 2022.</p>
+  </div>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- CALENDAR -->
+<div class="section">
+  <div class="section-label">Calendar &middot; Week of March 11, 2026</div>
+  <div class="cal-row">
+    <div class="cal-time">Today &middot; 08:30 ET</div>
+    <div class="cal-event">CPI February &middot; Consensus +2.5% YoY, +0.3% core MoM &middot; Pre-conflict data &middot; Asymmetric reaction function <span class="cal-flag red">High Impact Today</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">Thu Mar 12 &middot; 08:30 ET</div>
+    <div class="cal-event">PPI February &middot; Producer price upstream signal &middot; First read on whether tariff-plus-oil costs are hitting producer margins <span class="cal-flag gold">Watch</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Week</div>
+    <div class="cal-event">Iran conflict &middot; Hormuz tanker traffic &middot; Gulf refinery restart timeline &middot; Iraq and Saudi production levels <span class="cal-flag red">Priority</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">Mar 17-18</div>
+    <div class="cal-event">FOMC &middot; Powell press conference &middot; Dot plot &middot; First official Fed response to Iran macro shock &middot; NFP -92k, oil at $83 but structure broken, CPI today pre-conflict <span class="cal-flag red">Week's Horizon</span></div>
+  </div>
+</div>
+
+<div class="pullquote">
+  Oil is at $83. Yields are still rising. The bond market is not pricing today's crude. It is pricing the refinery capacity that is offline, the Gulf production that has been shut in, and the inflation path that runs from March through June regardless of where WTI trades this morning.
+  <div class="pullquote-attr">Open Range Capital Research &middot; March 11, 2026</div>
+</div>
+
+<div class="footer">
+  <p>Open Range Capital Research &middot; Morning Brief &middot; Wednesday, March 11, 2026</p>
+  <p>Private credit analysis: <a href="https://substack.com/home/post/p-188806163" class="accent-link">Part II: Blue Owl and the Credit Market Dimension</a> &middot; SaaS disruption: <a href="https://substack.com/home/post/p-188803679" class="accent-link">Part I: The Structural Revaluation in Application Software</a></p>
+  <p style="margin-top:10px;">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements. This document is for institutional research purposes. Not investment advice.</p>
+</div>
+
+</body>
+</html>
