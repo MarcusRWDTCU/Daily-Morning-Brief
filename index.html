@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Range Capital Research - Morning Brief March 12, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e0e;
+    --paper: #f5f0e8;
+    --cream: #ede8dc;
+    --accent: #c8392b;
+    --gold: #b8860b;
+    --muted: #6b6258;
+    --rule: #c9bfaf;
+    --green: #1a6644;
+    --red: #c8392b;
+    --blue: #1a3a5c;
+    --oil: #7a3b00;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Libre Baskerville', Georgia, serif; font-size: 16px; line-height: 1.7; max-width: 780px; margin: 0 auto; padding: 0 24px 80px; }
+  .masthead { border-bottom: 3px solid var(--ink); padding: 36px 0 20px; text-align: center; }
+  .masthead-top { display: flex; justify-content: space-between; align-items: baseline; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .publication-name { font-family: 'DM Serif Display', serif; font-size: 42px; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+  .publication-sub { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .headline-strip { background: var(--ink); color: var(--paper); padding: 14px 20px; margin: 0 -24px; display: flex; gap: 32px; align-items: center; overflow: hidden; }
+  .strip-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+  .strip-text { font-family: 'DM Mono', monospace; font-size: 12px; color: #e8e0d0; white-space: nowrap; animation: scroll-text 90s linear infinite; }
+  @keyframes scroll-text { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .section { margin-top: 40px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px; margin-bottom: 18px; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
+  h2 { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+  .deck { font-size: 18px; line-height: 1.55; color: #2a2520; margin-bottom: 20px; font-style: italic; }
+  .byline { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 32px; }
+  p { margin-bottom: 14px; }
+  hr.section-rule { border: none; border-top: 1px solid var(--rule); margin: 32px 0; }
+  .alert-box { border: 2px solid var(--accent); background: var(--cream); padding: 18px 20px; margin-bottom: 24px; }
+  .alert-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .alert-items { list-style: none; padding: 0; }
+  .alert-items li { font-family: 'DM Mono', monospace; font-size: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
+  .alert-items li:last-child { border-bottom: none; }
+  .alert-dot { display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-right: 10px; vertical-align: middle; }
+  .oil-banner { background: var(--oil); color: #fff8ee; padding: 20px 24px; margin: 0 -24px 0; text-align: center; }
+  .oil-banner-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; color: #d4a84b; }
+  .oil-banner-price { font-family: 'DM Serif Display', serif; font-size: 52px; line-height: 1; margin-bottom: 4px; }
+  .oil-banner-sub { font-family: 'DM Mono', monospace; font-size: 13px; color: #d4a84b; }
+  .market-table { width: 100%; border-collapse: collapse; font-family: 'DM Mono', monospace; font-size: 13px; margin-top: 4px; }
+  .market-table th { text-align: left; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 6px 8px; border-bottom: 2px solid var(--ink); }
+  .market-table td { padding: 8px 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .market-table tr:last-child td { border-bottom: none; }
+  .market-table .category { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-top: 14px; padding-bottom: 2px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .tag-note { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+  .thesis-box { border-left: 3px solid var(--accent); padding: 16px 20px; background: var(--cream); margin-bottom: 16px; }
+  .thesis-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .thesis-title { font-family: 'DM Serif Display', serif; font-size: 17px; margin-bottom: 8px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 4px; }
+  .stat-box { background: var(--cream); border: 1px solid var(--rule); padding: 12px 14px; }
+  .stat-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .stat-value { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1.1; margin-bottom: 2px; }
+  .stat-change { font-family: 'DM Mono', monospace; font-size: 11px; }
+  .stat-box.danger { border-color: var(--accent); background: #f8eae8; }
+  .stat-box.gold-box { border-color: var(--gold); background: #fdf8ec; }
+  .iea-box { border: 2px solid var(--blue); background: #eef2f7; padding: 18px 20px; margin: 24px 0; }
+  .iea-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+  .cal-row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+  .cal-row:last-child { border-bottom: none; }
+  .cal-time { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); min-width: 110px; padding-top: 2px; }
+  .cal-event { flex: 1; }
+  .cal-flag { font-family: 'DM Mono', monospace; font-size: 10px; background: var(--ink); color: var(--paper); padding: 2px 6px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+  .cal-flag.red { background: var(--accent); }
+  .cal-flag.gold { background: var(--gold); }
+  .pullquote { border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 20px 0; margin: 32px 0; font-family: 'DM Serif Display', serif; font-size: 22px; font-style: italic; line-height: 1.35; color: var(--blue); }
+  .pullquote-attr { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+  .footer { border-top: 3px solid var(--ink); margin-top: 60px; padding-top: 20px; font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; line-height: 1.8; }
+  .accent-link { color: var(--accent); text-decoration: none; }
+  .data-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 10px; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Open Range Capital Research</span>
+    <span>Thursday, March 12, 2026</span>
+    <span>Morning Brief</span>
+  </div>
+  <div class="publication-name">Morning Brief</div>
+  <div class="publication-sub">Markets &middot; Macro &middot; Investment Research</div>
+</div>
+
+<div class="headline-strip">
+  <span class="strip-label">Day 12</span>
+  <span class="strip-text">CPI +2.4% inline &middot; Iran IRGC: "not one litre of oil" through Hormuz &middot; IRGC warns $200/barrel &middot; "Most intense day" of US strikes, Hegseth &middot; Three ships struck in Hormuz &middot; Drones near Dubai airport &middot; IEA 400 million barrel SPR release, largest in history &middot; WTI $92.55 +6.07% &middot; UK Gilt -1.53% reversing two stabilization sessions &middot; US 10Y 4.233% +2.6bp &middot; S&P futures -0.79% &middot; PPI today &middot; FOMC in five days &middot; CPI inline &middot; Iran IRGC $200 warning &middot; Not one litre through Hormuz</span>
+</div>
+
+<!-- OIL BANNER -->
+<div class="oil-banner">
+  <div class="oil-banner-label">WTI Crude &middot; Apr 2026 &middot; Pre-market ~02:36 ET &middot; Day 12</div>
+  <div class="oil-banner-price">$92.55</div>
+  <div class="oil-banner-sub">+$5.30 &middot; +6.07% &middot; Brent $97.78 +6.31% &middot; Re-escalation erased CPI relief in full &middot; Iran IRGC: "Expect $200 per barrel" &middot; Three ships struck in Strait Wednesday</div>
+</div>
+
+<!-- ALERT -->
+<div class="section">
+  <div class="section-label">Situation Update &middot; Thursday March 12, 2026 &middot; Day 12 of US-Iran War</div>
+  <div class="alert-box">
+    <div class="alert-label">Wednesday Developments &middot; CPI Was Inline. Iran Escalated Anyway. The Relief Was 90 Minutes Long.</div>
+    <ul class="alert-items">
+      <li><span class="alert-dot"></span>CPI February: +2.4% YoY headline, +0.3% MoM, core +0.2% MoM / +2.5% YoY. All figures in line with consensus. Core was fractionally softer than the 0.3% whisper, driven by rent rising just 0.1%, the smallest monthly increase since January 2021. Brief equity pop. Brief bond rally. Both reversed within the session.</li>
+      <li><span class="alert-dot"></span>Iran's IRGC stated explicitly: "Not one litre of oil" will pass through the Strait of Hormuz. Any vessel linked to the US, Israel, or their allies "will be considered a legitimate target." The IRGC warned: "Expect oil at $200 per barrel."</li>
+      <li><span class="alert-dot"></span>Defense Secretary Hegseth declared Wednesday was "the most intense day" of US strikes on Iran. Iran responded with its own wave of attacks against Israel and the Persian Gulf. The conflict reached its peak operational tempo on the same day CPI tried to offer a data-driven pause.</li>
+      <li><span class="alert-dot"></span>Three cargo ships struck by projectiles in the Strait of Hormuz on Wednesday, confirmed by the UK's Maritime Trade Operations authority. One vessel was a Thai-flagged bulk carrier struck approximately 11 nautical miles north of Oman.</li>
+      <li><span class="alert-dot"></span>Two drones fell near Dubai International Airport. The airspace around Dubai was briefly closed. Four people were injured. The conflict has now physically reached the UAE, the Gulf's primary commercial aviation hub and financial center.</li>
+      <li><span class="alert-dot"></span>US forces destroyed 16 Iranian minelayers near the Strait of Hormuz, suggesting Iran had begun seeding the channel with naval mines. This is a significant operational development: naval mines require dedicated minesweeping operations to clear and are not addressed by escort pledges or SPR releases.</li>
+      <li><span class="alert-dot"></span>IEA member countries unanimously agreed to release 400 million barrels of oil from emergency reserves, the largest coordinated reserve release in history. Oil rose anyway. WTI closed Wednesday up approximately 4.5% despite the SPR announcement.</li>
+      <li><span class="alert-dot"></span>UK Gilt fell 1.53% to 89.89, reversing both of its two recovery sessions in a single day. The cumulative decline from pre-crisis levels is back above 7%. The stabilization was the relief trade. This is the structure.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- LEDE -->
+<div class="section">
+  <div class="section-label">Analysis</div>
+  <h1>CPI Was Inline. The Relief Lasted 90 Minutes. Iran Then Said "Not One Litre." The IEA Released 400 Million Barrels. Oil Rose Anyway.</h1>
+
+  <p class="deck">This brief wrote yesterday that a cool CPI print would produce "brief relief" with a half-life measured in hours. The February CPI came in exactly inline at +2.4% YoY, core fractionally soft at +0.2% MoM against a +0.3% whisper. Markets got their 90 minutes. Then the IRGC said not one litre of oil would pass through Hormuz. Hegseth called it the most intense day of strikes. Three ships were hit in the Strait. Drones landed near Dubai's airport. The IEA released 400 million barrels, the largest coordinated reserve action in history. Oil closed up 4.5%. The Gilt reversed both recovery sessions in one day. The asymmetric reaction function worked with textbook precision.</p>
+
+  <p class="byline">Open Range Capital Research &middot; Marcus Drauschke &middot; March 12, 2026</p>
+
+  <p>The February CPI result itself was clean. Headline at +2.4% YoY, core at +2.5% YoY, shelter rising just 0.1% monthly for its smallest gain since January 2021. The disinflationary momentum in housing that the Fed had been waiting for was present. Tariff impacts on goods were visible but not accelerating. Sonu Varghese at Carson Group summarized the consensus read precisely: this CPI confirms the Fed had an inflation problem before the energy shock, and it is "the calm before the storm." The February print is the last backward-looking data point before the March CPI, which arrives in mid-April and will show oil averaging above $90 for an entire month, pump prices 19% above their pre-conflict level at $3.50 per gallon in the US and approaching €2.00 per liter in Germany, and refinery capacity impaired across three major Gulf complexes. The February number told markets what they already knew. The market moved on within the session.</p>
+
+  <p>The mine discovery is the most consequential tactical development of the week and is receiving a fraction of the attention of the IRGC's $200 oil warning. US forces destroyed 16 Iranian minelayers near the Strait of Hormuz on Wednesday, which confirms that Iran has been deploying naval mines in or near the channel. Naval mines are fundamentally different from missile and drone attacks as a maritime threat. Missiles and drones require active launch capability to remain a danger. Mines persist autonomously in the water until swept. The US Navy's convoy escort pledge, the G7 SPR releases, and the IEA coordinated action all address the threat posed by active Iranian fire. None of them clear mines. Dedicated minesweeping operations require MCM vessels, careful navigation lanes, and significant time. The Fifth Fleet's normal Gulf posture includes a handful of dedicated minesweeping assets. The Strait of Hormuz is 21 miles wide at its narrowest point. The number of mine-capable lanes through that navigation channel is finite and small. If Iran has seeded those lanes, resuming commercial transit requires confirming they are clear, which is a physical operation that takes days to weeks even with dedicated assets fully deployed. The IEA can release 400 million barrels. It cannot sweep mines.</p>
+
+  <p>The IEA release itself deserves an honest accounting of what it can and cannot do. Four hundred million barrels is the largest coordinated emergency reserve release in history, exceeding even the volumes deployed after Hurricane Katrina and during the early phase of the Ukraine war. At current global consumption of approximately 103 million barrels per day, 400 million barrels represents roughly four days of total global oil demand. The relevant metric is not total consumption but the lost Hormuz throughput. Before the conflict, approximately 20 million barrels per day transited the Strait. That flow has effectively stopped. Four hundred million barrels provides the equivalent of 20 days of Hormuz-equivalent supply at pre-closure flow rates, or roughly three weeks of buffer against the physical disruption if drawn down at the pace needed. The energy market analyst at Marex was direct: the IEA release "buys us a few days," and "this conflict needs to end by the end of the week, otherwise we'll see oil prices spike back above $100." The conflict did not end by the end of the week. Oil is at $92.55 pre-market. The clock on the IEA buffer has started.</p>
+
+  <p>The UAE dimension entered the picture directly on Wednesday. Dubai airport is the world's second busiest international hub and serves as the primary connection point for Gulf carrier traffic between Asia, Europe, and the Americas. Drones falling in the vicinity of its airspace is not a peripheral event for energy markets. The UAE is the Gulf's largest non-Saudi refined products re-export hub and the location of the Fujairah oil terminal, which this brief has tracked as the primary alternative export route for Gulf barrels that cannot transit Hormuz. If the conflict reaches the point where UAE airspace and infrastructure are operationally threatened, the alternative routing thesis that has partially supported oil prices below their $119 crisis peak begins to close off. For European markets, the UAE disruption dimension matters because Gulf aviation connectivity runs through Dubai. Lufthansa, Air France, and the major European carriers all have significant UAE transit exposure. Higher jet fuel costs plus reduced connectivity to Asian markets via Dubai adds a second-order economic cost to European corporates that has not yet been quantified in the data.</p>
+
+  <p>Germany and Europe's gasoline market is absorbing the re-escalation in real time. The ADAC national average for Super E10 had already climbed above €1.90 per liter by early March, approaching the all-time German record of €2.259 set in March 2022. Wednesday's oil re-escalation, with WTI up more than 6% and Heating Oil up 2.71%, will translate into a further German and EU pump price increase within the weekly ADAC reporting cycle. The EU average was €1.574 per liter as of March 2, meaning German consumers are already paying approximately 25% above the continental average and rising. The political context matters: Germany is in the early stages of a new coalition government, navigating a fiscal framework under the recently revised debt brake, and facing a consumer confidence environment that was already fragile before €2.00 per liter at the forecourt became the reference price. The Carson Group's "calm before the storm" framing applies as precisely to German CPI as to US CPI. Germany's February inflation came in around 2.1% YoY. The March reading, shaped by the same structural energy shock, will be a materially different number.</p>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- IEA BOX -->
+<div class="iea-box">
+  <div class="iea-label">IEA Emergency Release &middot; 400 Million Barrels &middot; Largest in History &middot; What It Can and Cannot Do</div>
+  <h2 style="margin-bottom:12px;">400 Million Barrels Is Approximately 20 Days of Pre-Conflict Hormuz Flow. It Cannot Sweep Mines.</h2>
+  <div class="two-col" style="margin-bottom:16px;">
+    <div class="stat-box">
+      <div class="stat-label">SPR Release Volume</div>
+      <div class="stat-value">400M</div>
+      <div class="stat-change">Barrels &middot; Largest coordinated IEA action in history &middot; Exceeds Ukraine and Katrina responses</div>
+    </div>
+    <div class="stat-box danger">
+      <div class="stat-label">Daily Hormuz Flow (pre-conflict)</div>
+      <div class="stat-value">~20M</div>
+      <div class="stat-change down">Barrels/day &middot; 400M = ~20 days of Hormuz-equivalent buffer at full closure rates</div>
+    </div>
+  </div>
+  <p style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin:0;">The IEA release addresses the crude supply gap. It does not address naval mines in the shipping channel. It does not restart Ras Tanura, Bapco, or Ras Laffan. It does not insure tankers. The Marex energy analyst stated explicitly: this buys "a few days." If the conflict is not resolved by end of week, oil spikes back above $100. The conflict was not resolved by end of week. Oil is at $92.55 pre-market and rising.</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- KEY NUMBERS -->
+<div class="section">
+  <div class="section-label">Key Numbers &middot; Thursday Pre-market</div>
+  <div class="two-col">
+    <div class="stat-box danger">
+      <div class="stat-label">WTI &middot; Re-escalation Fully Reverses CPI Relief</div>
+      <div class="stat-value">$92.55</div>
+      <div class="stat-change up">+$5.30 &middot; +6.07% &middot; IEA 400M barrels could not hold price down</div>
+    </div>
+    <div class="stat-box danger">
+      <div class="stat-label">UK Gilt &middot; Two Recovery Sessions Erased in One</div>
+      <div class="stat-value">89.89</div>
+      <div class="stat-change down">-1.40 &middot; -1.53% &middot; Cumulative decline from pre-crisis back above 7%</div>
+    </div>
+    <div class="stat-box danger">
+      <div class="stat-label">US 10Y &middot; Rising Into FOMC Week</div>
+      <div class="stat-value">4.233%</div>
+      <div class="stat-change up">+0.026 &middot; +0.62% &middot; +23bp from pre-conflict sub-4% level</div>
+    </div>
+    <div class="stat-box danger">
+      <div class="stat-label">Japan 40Y &middot; New Crisis High Again</div>
+      <div class="stat-value">3.720%</div>
+      <div class="stat-change up">+0.025 &middot; +0.68% &middot; Long-end JGB continues breaking out</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Heating Oil &middot; Refinery Layer Persists</div>
+      <div class="stat-value">$3.8861</div>
+      <div class="stat-change up">+$0.1024 &middot; +2.71% &middot; Above crude percentage gain &middot; Refineries still offline</div>
+    </div>
+    <div class="stat-box gold-box">
+      <div class="stat-label">Gold &middot; Slight Pullback, Holding $5,100+</div>
+      <div class="stat-value">$5,166</div>
+      <div class="stat-change down">-$12.79 &middot; -0.25% &middot; Geopolitical premium structurally intact</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-rule">
+
+<!-- MARKET SNAPSHOT TABLE -->
+<div class="section">
+  <div class="section-label">Market Snapshot</div>
+  <h2>Market Snapshot</h2>
+  <p style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:16px;">Open Range Capital Research &middot; Marcus Drauschke &middot; March 12, 2026</p>
+
+  <table class="market-table">
+    <thead><tr><th>Instrument</th><th>Level</th><th>Change</th><th>Note</th></tr></thead>
+    <tbody>
+
+      <tr><td colspan="4" class="category">US Equity &middot; Wednesday March 11 Close</td></tr>
+      <tr><td>Dow Jones</td><td>47,417.27</td><td class="down">-289.24 &middot; -0.61%</td><td><span class="tag-note">CPI relief reversed intraday &middot; Iran escalation controlled the close</span></td></tr>
+      <tr><td>S&amp;P 500</td><td>6,775.80</td><td class="down">-5.68 &middot; -0.08%</td><td><span class="tag-note">Near flat but session range tells the story: 6,811 high to 6,745 low</span></td></tr>
+      <tr><td>Nasdaq</td><td>22,716.14</td><td class="up">+19.03 &middot; +0.08%</td><td><span class="tag-note">Essentially flat &middot; Tech held up marginally better than broader market</span></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,543.70</td><td class="down">-4.38 &middot; -0.17%</td><td></td></tr>
+      <tr><td>S&amp;P 500 VIX</td><td>24.23</td><td class="down">-0.70 &middot; -2.81%</td><td><span class="tag-note">Cash VIX lower but futures 24.98 +5.93% signals overnight re-escalation correctly priced in</span></td></tr>
+      <tr><td>DAX</td><td>23,640.03</td><td class="down">-328.60 &middot; -1.37%</td><td><span class="tag-note">Tuesday's 2.39% rally fully reversed plus additional losses &middot; European energy exposure reasserted</span></td></tr>
+      <tr><td>S&amp;P/TSX</td><td>33,119.83</td><td class="down">-150.82 &middot; -0.45%</td><td></td></tr>
+      <tr><td>MSCI World</td><td>4,420.30</td><td class="down">-5.74 &middot; -0.13%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">US Futures &middot; Pre-market ~02:36 ET</td></tr>
+      <tr><td>US 30 (Dow)</td><td>46,962.3</td><td class="down">-455.0 &middot; -0.96%</td><td><span class="tag-note">Gap-down open Thursday &middot; Iran mine discovery + IRGC $200 threat driving</span></td></tr>
+      <tr><td>US 500 (S&amp;P)</td><td>6,722.6</td><td class="down">-53.2 &middot; -0.79%</td><td><span class="tag-note">Below 6,740 pre-FOMC &middot; Wells Fargo 6,000 target now 10.7% lower</span></td></tr>
+      <tr><td>US Tech 100</td><td>24,774.9</td><td class="down">-190.1 &middot; -0.76%</td><td></td></tr>
+      <tr><td>Small Cap 2000</td><td>2,497.6</td><td class="down">-45.3 &middot; -1.78%</td><td><span class="tag-note">Sharpest futures decline again &middot; Rate and growth double-hit</span></td></tr>
+      <tr><td>VIX Futures</td><td>24.98</td><td class="up">+1.40 &middot; +5.93%</td><td><span class="tag-note">Fear repricing overnight despite lower cash VIX close &middot; Mine discovery the driver</span></td></tr>
+      <tr><td>DAX Futures</td><td>23,405.5</td><td class="down">-189.5 &middot; -0.80%</td><td><span class="tag-note">DAX lost Tuesday's entire 2.39% gain and is now going lower &middot; UAE disruption adding European dimension</span></td></tr>
+      <tr><td>CAC 40</td><td>7,964.8</td><td class="down">-71.5 &middot; -0.89%</td><td></td></tr>
+      <tr><td>FTSE 100</td><td>10,283.3</td><td class="down">-30.2 &middot; -0.29%</td><td></td></tr>
+      <tr><td>Euro Stoxx 50</td><td>5,732</td><td class="down">-47 &middot; -0.81%</td><td></td></tr>
+      <tr><td>FTSE MIB</td><td>44,799.00</td><td class="down">-431.00 &middot; -0.95%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Commodities &middot; Pre-market ~02:36 ET</td></tr>
+      <tr><td>WTI Crude (Apr 26)</td><td>$92.55</td><td class="up">+$5.30 &middot; +6.07%</td><td><span class="tag-note">Re-escalation reverses full CPI relief &middot; IEA 400M barrels could not hold prices down</span></td></tr>
+      <tr><td>Brent (May 26)</td><td>$97.78</td><td class="up">+$5.80 &middot; +6.31%</td><td><span class="tag-note">Approaching $100 again &middot; Three ships struck Wednesday &middot; Mine threat adds new risk layer</span></td></tr>
+      <tr><td>Heating Oil (Apr 26)</td><td>$3.8861</td><td class="up">+$0.1024 &middot; +2.71%</td><td><span class="tag-note">Rising faster than crude percentage-wise &middot; Refinery offline status unchanged by IEA release</span></td></tr>
+      <tr><td>Gasoline RBOB (Apr 26)</td><td>$2.8974</td><td class="up">+$0.1091 &middot; +3.91%</td><td><span class="tag-note">US pump pressure intensifying &middot; $3.50 national average Monday &middot; Moving higher</span></td></tr>
+      <tr><td>Natural Gas (Apr 26)</td><td>$3.254</td><td class="up">+$0.030 &middot; +0.93%</td><td><span class="tag-note">Ras Laffan force majeure still active &middot; European TTF divergence building</span></td></tr>
+      <tr><td>Gold (Apr 26)</td><td>$5,166.31</td><td class="down">-$12.79 &middot; -0.25%</td><td><span class="tag-note">Minor pullback &middot; Holding above $5,100 &middot; Geopolitical premium structurally intact</span></td></tr>
+      <tr><td>Silver (May 26)</td><td>$85.680</td><td class="up">+$0.145 &middot; +0.17%</td><td></td></tr>
+      <tr><td>Copper (May 26)</td><td>$5.8530</td><td class="down">-$0.0558 &middot; -0.94%</td><td><span class="tag-note">Industrial demand destruction signal strengthening &middot; Growth outlook deteriorating</span></td></tr>
+      <tr><td>US Wheat (May 26)</td><td>$598.40</td><td class="up">+$2.15 &middot; +0.36%</td><td><span class="tag-note">Fertilizer supply chain still impaired &middot; Planting season pressure</span></td></tr>
+      <tr><td>US Soybeans (May 26)</td><td>$1,221.38</td><td class="up">+$7.13 &middot; +0.59%</td><td></td></tr>
+
+      <tr><td colspan="4" class="category">Bond Yields &middot; Pre-market ~02:33 ET</td></tr>
+      <tr><td>US 10Y</td><td>4.233%</td><td class="up">+0.026 &middot; +0.62%</td><td><span class="tag-note">+23bp from pre-conflict sub-4% &middot; Powell must address this at FOMC in five days</span></td></tr>
+      <tr><td>US 30Y</td><td>4.883%</td><td class="up">+0.027 &middot; +0.56%</td><td><span class="tag-note">Long end at cycle highs &middot; Inflation expectations locked in</span></td></tr>
+      <tr><td>US 2Y</td><td>3.668%</td><td class="up">+0.032 &middot; +0.88%</td><td><span class="tag-note">Sharpest yield rise today &middot; Short end pricing cuts further out in response to re-escalation</span></td></tr>
+      <tr><td>Japan 10Y</td><td>2.184%</td><td class="up">+0.013 &middot; +0.60%</td><td><span class="tag-note">Resuming rise after single-day relief &middot; BoJ pressure building again</span></td></tr>
+      <tr><td>Japan 30Y</td><td>3.478%</td><td class="up">+0.035 &middot; +1.02%</td><td><span class="tag-note">Long-end accelerating &middot; JGB curve steepening resumed</span></td></tr>
+      <tr><td>Japan 40Y</td><td>3.720%</td><td class="up">+0.025 &middot; +0.68%</td><td><span class="tag-note">New crisis high &middot; Each day's record exceeds the last &middot; BoJ has no clean response</span></td></tr>
+      <tr><td>UK Gilt</td><td>89.89</td><td class="down">-1.40 &middot; -1.53%</td><td><span class="tag-note">Both recovery sessions erased in one day &middot; Cumulative decline from pre-crisis back above 7%</span></td></tr>
+      <tr><td>Euro Bund</td><td>126.00</td><td class="down">-0.33 &middot; -0.26%</td><td><span class="tag-note">European sovereigns selling off again &middot; Brief relief in bonds fully reversed</span></td></tr>
+
+      <tr><td colspan="4" class="category">Currencies &middot; Pre-market ~02:36 ET</td></tr>
+      <tr><td>EUR/USD</td><td>1.1549</td><td class="down">-0.0017 &middot; -0.15%</td><td><span class="tag-note">Euro weakening on re-escalation &middot; European energy import vulnerability repriced</span></td></tr>
+      <tr><td>USD/JPY</td><td>158.94</td><td class="down">-0.01 &middot; -0.01%</td><td><span class="tag-note">Crossing 159 today &middot; BoJ intervention threshold at 158-160 &middot; Japan 40Y at new high adds pressure</span></td></tr>
+      <tr><td>GBP/USD</td><td>1.3378</td><td class="down">-0.0033 &middot; -0.25%</td><td><span class="tag-note">Sterling reversing alongside Gilt &middot; Two sessions of recovery gone</span></td></tr>
+      <tr><td>USD/CHF</td><td>0.7814</td><td class="up">+0.0014 &middot; +0.18%</td><td><span class="tag-note">Dollar strengthening on safe-haven demand</span></td></tr>
+
+      <tr><td colspan="4" class="category">Crypto &middot; Pre-market ~02:35 ET</td></tr>
+      <tr><td>Bitcoin</td><td>$69,498.7</td><td class="down">-$453.6 &middot; -0.65%</td><td><span class="tag-note">Second minor pullback &middot; Holding near $69,500 &middot; Still +9.9% from pre-conflict &middot; Thesis intact</span></td></tr>
+      <tr><td>Ethereum</td><td>$2,030.83</td><td class="up">+$6.49 &middot; +0.32%</td><td></td></tr>
+      <tr><td>Solana</td><td>$85.269</td><td class="down">-$0.766 &middot; -0.89%</td><td></td></tr>
+      <tr><td>BNB</td><td>$645.10</td><td class="up">+$2.10 &middot; +0.33%</td><td></td></tr>
+
+    </tbody>
+  </table>
+  <p class="data-note">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements</p>
+</div>
+
+<hr class="section-rule">
+
+<!-- THREE THESES -->
+<div class="section">
+  <div class="section-label">Three Theses &middot; What the Data Is Actually Saying</div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis I &middot; The Mine Thesis</div>
+    <div class="thesis-title">US Forces Destroyed 16 Iranian Minelayers. SPR Releases Cannot Sweep Mines. This Is the Threat That Persists After Every Diplomatic or Market Intervention.</div>
+    <p>Naval mines represent a qualitatively different threat to Hormuz transit than missiles, drones, or gunboat harassment. Missiles and drones require an active Iranian decision to fire and can be addressed through air defense, escort operations, or deterrence. Mines, once deployed, are autonomous. They do not require an Iranian soldier to press a button. They persist in the water until physically removed by dedicated MCM vessels operating in cleared lanes. The discovery that Iran was seeding the Strait with mines is the strategic development that the market has underpriced relative to the IRGC's $200 price warning, which is the headline number drawing attention. A $200 oil forecast is a threat about what might happen. Naval mines in the Strait are an operational fact about what is already there. Every diplomatic resolution framework, every SPR release, and every escort pledge must now include a mine clearance operation as a precondition for any resumption of commercial transit. This adds weeks to any realistic reopening timeline regardless of whether Iran agrees to stop active attacks. The IEA's 400 million barrels buys approximately 20 days of Hormuz-equivalent supply. Mine clearance takes longer than 20 days.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis II &middot; The UK Gilt as Structural Barometer</div>
+    <div class="thesis-title">The Gilt Fell 1.53% Wednesday, Erasing Both Recovery Sessions. Cumulative Decline Back Above 7%. The Brief Stabilization Was the Relief Trade. This Is the Structure.</div>
+    <p>The UK Gilt's behavior across the past four sessions carries more information than any single session's move. From Day 9, the Gilt had declined seven consecutive sessions for a cumulative loss of approximately 7.4% from pre-crisis levels. Then it recovered 0.52% on Day 10 and 0.79% on Day 11, partially on the oil retreat from $119 and partially on the CPI relief trade. Wednesday it fell 1.53%, erasing both recovery sessions in a single day and returning the cumulative decline back above 7% from pre-crisis. The pattern is precise: when oil retreats on verbal interventions or data-driven relief, the Gilt stabilizes. When operational facts reassert, the Gilt resumes its structural decline. This is the cleanest expression in the bond market of the difference between the verbal narrative and the physical reality of the conflict. The Gilt is not pricing day-to-day oil moves. It is pricing the stagflation scenario that this brief has documented since Day 2: a central bank that cannot cut into an oil shock and cannot raise into a contracting labor market, holding a fixed policy rate while both mandates deteriorate simultaneously. Wednesday's Gilt move is not a new development. It is a return to the structure after a two-day interruption.</p>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Thesis III &middot; Germany and Europe Entering the Pump Price Crisis Zone</div>
+    <div class="thesis-title">Brent Back Toward $100. German Pump Already Near €1.97/L. The March 2022 All-time Record of €2.259/L Is Now the Reference Point for the Scenario Analysis.</div>
+    <p>With Brent at $97.78 and rising, the German pump price trajectory is accelerating back toward €2.00 per liter and beyond. The ADAC national average was at approximately €1.897 per liter as of early March, up 12.1 cents in a single week, with individual stations in Bremen and other German cities already crossing €2.00. The 2022 record of €2.259 was set when Brent averaged approximately €110 per barrel at peak Ukraine-shock pricing. Brent is now at $97.78 pre-market and has touched $101 intraday within the past week. The EU average was €1.574 as of March 2, meaning Germany is already well above the continental average. European consumers face a structural pump price crisis that is being built in real time from three compounding factors: the crude shock, the refinery capacity offline at Gulf complexes, and the LNG disruption that adds to European natural gas costs through a separate supply channel. The DAX and Euro Stoxx 50 both entering Thursday in the red, with futures down 0.80% and 0.81% respectively, is the equity market beginning to price the compound nature of Europe's exposure rather than treating it as a single variable. German and European household disposable income is being compressed at the pump. Consumer-facing sectors, retail, and anything with a transport cost component will show this in the Q1 earnings reports that begin arriving in April.</p>
+  </div>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- CALENDAR -->
+<div class="section">
+  <div class="section-label">Calendar &middot; Final Days Before FOMC</div>
+  <div class="cal-row">
+    <div class="cal-time">Today &middot; 08:30 ET</div>
+    <div class="cal-event">PPI February &middot; Producer price signal &middot; Upstream pressure from tariffs plus beginning of energy cost pass-through <span class="cal-flag red">High Impact</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">Iran conflict &middot; Mine clearance operations &middot; Hormuz shipping status &middot; IRGC posture post-Hegseth "most intense day" statement <span class="cal-flag red">Priority</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">All Day</div>
+    <div class="cal-event">IEA 400M barrel release mechanics &middot; Drawdown pace &middot; Whether additional SPR action is signaled by G7 <span class="cal-flag gold">Watch</span></div>
+  </div>
+  <div class="cal-row">
+    <div class="cal-time">Mar 17-18</div>
+    <div class="cal-event">FOMC &middot; Powell press conference &middot; Dot plot &middot; First official Fed response to: NFP -92k, CPI +2.4% pre-conflict, WTI $92 and rising, UK Gilt -7%, Japan 40Y at record, mine threat in Hormuz <span class="cal-flag red">Week's Horizon</span></div>
+  </div>
+</div>
+
+<div class="pullquote">
+  The IEA released 400 million barrels, the largest emergency action in its history. Oil rose anyway. The IRGC said not one litre passes. US forces found mines in the Strait. The February CPI was inline and already irrelevant. The FOMC meets in five days with no clean move on any variable in front of it.
+  <div class="pullquote-attr">Open Range Capital Research &middot; March 12, 2026</div>
+</div>
+
+<div class="footer">
+  <p>Open Range Capital Research &middot; Morning Brief &middot; Thursday, March 12, 2026</p>
+  <p>Private credit analysis: <a href="https://substack.com/home/post/p-188806163" class="accent-link">Part II: Blue Owl and the Credit Market Dimension</a> &middot; SaaS disruption: <a href="https://substack.com/home/post/p-188803679" class="accent-link">Part I: The Structural Revaluation in Application Software</a></p>
+  <p style="margin-top:10px;">Sources: Bloomberg &middot; Hiddenmetrix.com &middot; LSEG &middot; Company Statements. This document is for institutional research purposes. Not investment advice.</p>
+</div>
+
+</body>
+</html>
